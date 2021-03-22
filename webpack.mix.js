@@ -11,7 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix
+    .js('resources/js/app.js', 'public/js')
+    .js('resources/js/navbar.js', 'public/js')
+
+    .postCss('resources/css/navbar.css', 'public/css')
+    .postCss('resources/css/custom.css', 'public/css')
+    .postCss('resources/css/proyectos.css', 'public/css')
+    .postCss('resources/css/footer.css', 'public/css')
+    
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),

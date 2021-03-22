@@ -6,17 +6,22 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+        <!--font-awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/navbar.css') }}"> 
+        <link rel="stylesheet" href="{{ mix('css/custom.css') }}"> 
+        <link rel="stylesheet" href="{{ mix('css/proyectos.css') }}"> 
+        <link rel="stylesheet" href="{{ mix('css/footer.css') }}"> 
 
         @livewireStyles
 
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
         <x-jet-banner />
@@ -28,10 +33,17 @@
             <main>
                 {{ $slot }}
             </main>
+            @livewire('footer')
         </div>
 
         @stack('modals')
 
         @livewireScripts
+        <!-- Scripts -->  
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{{ mix('js/app.js') }}" defer></script>
+        <script src="{{ mix('js/navbar.js') }}" defer></script>
     </body>
 </html>

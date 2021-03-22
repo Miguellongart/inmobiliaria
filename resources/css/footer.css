@@ -1,0 +1,31 @@
+/*Footer*/
+footer{
+    padding: 40px 0px;
+    margin: 15px 0px 0px 0px;
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+footer img.logo-footer{
+    width: 210px;
+    margin-bottom: 10px;
+}
+footer p, span{
+    font-size: 12px;
+    text-align: justify;
+}
+footer ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+footer i{
+    margin: 0px 10px;
+    font-size: 25px;
+}
+footer button.btn-footer{
+    margin: 15px auto;
+    background-color: var(--amarillo);
+    color: var(--negro);
+    font-weight: 900;
+    border-radius: 15px;
+    padding: 5px 10px;
+}
