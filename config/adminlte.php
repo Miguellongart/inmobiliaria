@@ -240,60 +240,92 @@ return [
             'icon'        => 'fas fa-tachometer-alt fa-fw',
         ],
         [
-            'text'        => 'Usuarios',
-            'route'       => 'admin.users.index',
-            'icon'        => 'fas fa-tachometer-alt fa-fw',
-            'can'         => 'admin.user.index',
-        ],
-        [
-            'text'        => 'Roles',
-            'route'       => 'admin.rol.index',
-            'icon'        => 'fas fa-tachometer-alt fa-fw',
-            'can'         => 'admin.rol.index',
-        ],
-        [
-            'text'        => 'Permisos',
-            'route'       => 'admin.permissions.index',
-            'icon'        => 'fas fa-tachometer-alt fa-fw',
-            'can'         => 'admin.permissions.index',
+            'text'    => 'Inf. Usuarios',
+            'icon'    => 'fas fa-house-user',
+            'submenu' => [
+                [
+                    'text'        => 'Usuarios',
+                    'route'       => 'admin.users.index',
+                    'icon'        => 'fas fa-users',
+                    'can'         => 'admin.user.index',
+                ],
+                [
+                    'text'        => 'Roles',
+                    'route'       => 'admin.rol.index',
+                    'icon'        => 'fas fa-user-tag',
+                    'can'         => 'admin.rol.index',
+                ],
+                [
+                    'text'        => 'Permisos',
+                    'route'       => 'admin.permissions.index',
+                    'icon'        => 'fas fa-lock-open',
+                    'can'         => 'admin.permissions.index',
+                ],
+            ],
         ],
         ['header' => 'Panel'],
         [
-            'text'    => 'multilevel',
+            'text'    => 'Configuracion',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
+                    'text' => 'Inf. Paises',
                     'submenu' => [
                         [
-                            'text' => 'level_two',
-                            'url'  => '#',
+                            'text' => 'Listado Paises',
+                            'route'  => 'admin.pais.index',
                         ],
                         [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
+                            'text' => 'Listado Estados',
+                            'route'  => 'admin.estado.index',
+                        ],
+                        [
+                            'text' => 'Listado Municipio',
+                            'route'  => 'admin.municipio.index',
+                        ],
+                        [
+                            'text' => 'Listado Sector',
+                            'route'  => 'admin.sector.index',
                         ],
                     ],
                 ],
+            ],
+        ],
+        [
+            'text'    => 'Propiedades',
+            'icon'    => 'fas fa-house-user',
+            'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text'        => 'Tipo de propiedad',
+                    'route'       => 'admin.t_propiedad.index',
+                    'icon'        => 'fas fa-hotel',
+                    /*'can'         => 'admin.t_propiedad.index',*/
                 ],
+                [
+                    'text'        => 'Tipo de Operacion',
+                    'route'       => 'admin.t_operacion.index',
+                    'icon'        => 'fas fa-filter',
+                    /*'can'         => 'admin.t_operacion.index',*/
+                ],
+                [
+                    'text'    => 'Tags Adicionales',
+                    'icon'    => 'fas fa-fw fa-share',
+                    'submenu' => [
+                        [
+                            'text' => 'Adicionales',
+                            'route'  => 'admin.adicional.index',
+                        ],
+                        [
+                            'text' => 'Inst. y Comodidades',
+                            'route'  => 'admin.instalacion.index',
+                        ],
+                        [
+                            'text' => 'Facilidades Cercanas',
+                            'route'  => 'admin.facilidad.index',
+                        ],
+                    ],
+                ],
+                
             ],
         ],
         /*['header' => 'labels'],*/
@@ -335,7 +367,7 @@ return [
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -355,7 +387,7 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -386,6 +418,21 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
+                ],
+            ],
+        ],        
+        'Toastr' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css',
                 ],
             ],
         ],

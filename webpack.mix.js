@@ -14,6 +14,7 @@ const mix = require('laravel-mix');
 mix
     .js('resources/js/app.js', 'public/js')
     .js('resources/js/navbar.js', 'public/js')
+    .js('resources/js/admin.js', 'public/admin/js')
 
     .postCss('resources/css/navbar.css', 'public/css')
     .postCss('resources/css/custom.css', 'public/css')

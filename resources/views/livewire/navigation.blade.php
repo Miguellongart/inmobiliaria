@@ -10,8 +10,8 @@
             <li class="nav-item-grid"><a href="/">Inicio</a></li>
             <li class="nav-item-grid"><a href="{{route('front.proyectos')}}">Proyecto</a></li>
             <li class="nav-item-grid"><a href="{{route('front.vender')}}">Vender</a></li>
-            <li class="nav-item-grid"><a href="#">Servicio</a></li>
-            <li class="nav-item-grid"><a href="#">Contacto</a></li>  
+            <li class="nav-item-grid"><a href="{{route('front.servicios')}}">Servicio</a></li>
+            <li class="nav-item-grid"><a href="{{route('front.contacto')}}">Contacto</a></li>  
             @auth      
                 <img class="img-profile" src="{{ auth()->user()->profile_photo_url}}" alt="">
                 <li class="nav-item-grid"><a href="">{{ auth()->user()->name}}</a></li> 

@@ -22,6 +22,12 @@ Route::get('/proyectos', function () {
 Route::get('/vender', function () {
     return view('front.vender');
 })->name('front.vender');
+Route::get('/servicios', function () {
+    return view('front.servicios');
+})->name('front.servicios');
+Route::get('/contacto', function () {
+    return view('front.contacto');
+})->name('front.contacto');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

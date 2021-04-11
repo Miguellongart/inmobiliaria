@@ -113,27 +113,8 @@
 @stop
 
 @section('js')
-    <script>
-        $(document).ready(function() {
-        $('#dataTable').DataTable({
-                    responsive: true,
-                    autoWidth: false,
-                    order: [ 0, 'desc' ],
-                    language: {
-                            "zeroRecords": "No se encontró ningún curso",
-                            "info": "Mostrando la página _PAGE_ de _PAGES_",
-                            "infoEmpty": "No records available",
-                            "infoFiltered": "(filtrado de _MAX_ registros totales)",
-                            'search': 'Buscar:',
-                            'paginate': {
-                                'next': 'Siguiente',
-                                'previous': 'Anterior'
-                            }
-                    }
-                });
-        } );
-        @if($title)
-            swal("Good job!", "You clicked the button!", "success");
-        @endif
-    </script>
+<script src="{{ mix('admin/js/admin.js') }}" defer></script>
+<script>
+    @include('admin.toastr')
+</script>
 @stop

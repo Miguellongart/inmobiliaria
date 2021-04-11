@@ -61,6 +61,114 @@ class RoleSeeder extends Seeder
         Permission::updateOrCreate(
             ['name' => 'admin.permissions.destroy'], 
             ['description' => 'Eliminar permiso'])->syncRoles([$role1]);
+        /*Paises*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.pais.index'], 
+            ['description' => 'Listado paises'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.pais.create'], 
+            ['description' => 'Crear pais'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.pais.edit'], 
+            ['description' => 'Editar pais'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.pais.destroy'], 
+            ['description' => 'Eliminar pais'])->syncRoles([$role1]);
+        /*Estados*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.estado.index'], 
+            ['description' => 'Listado estados'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.estado.create'], 
+            ['description' => 'Crear estado'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.estado.edit'], 
+            ['description' => 'Editar estado'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.estado.destroy'], 
+            ['description' => 'Eliminar estado'])->syncRoles([$role1]);            
+        /*Municipios*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.municipio.index'], 
+            ['description' => 'Listado municipios'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.municipio.create'], 
+            ['description' => 'Crear municipio'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.municipio.edit'], 
+            ['description' => 'Editar municipio'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.municipio.destroy'], 
+            ['description' => 'Eliminar municipio'])->syncRoles([$role1]);            
+        /*Tipo operacion*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.t_operacion.index'], 
+            ['description' => 'Listado Tipo de operaciones'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.t_operacion.create'], 
+            ['description' => 'Crear Tipo de operacion'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.t_operacion.edit'], 
+            ['description' => 'Editar Tipo de operacion'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.t_operacion.destroy'], 
+            ['description' => 'Eliminar Tipo de operacion'])->syncRoles([$role1]);            
+        /*Tipo Propiedad*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.t_propiedad.index'], 
+            ['description' => 'Listado Tipo de propiedades'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.t_propiedad.create'], 
+            ['description' => 'Crear Tipo de propiedad'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.t_propiedad.edit'], 
+            ['description' => 'Editar Tipo de propiedad'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.t_propiedad.destroy'], 
+            ['description' => 'Eliminar Tipo de propiedad'])->syncRoles([$role1]);
+        
+        /*tag facilidad y cercania*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.facilidad.index'], 
+            ['description' => 'Listado de tags facilidades'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.facilidad.create'], 
+            ['description' => 'Crear tags facilida'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.facilidad.edit'], 
+            ['description' => 'Editar tags facilida'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.facilidad.destroy'], 
+            ['description' => 'Eliminar tags facilida'])->syncRoles([$role1]);
+
+        /*Tag adicional*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.adicional.index'], 
+            ['description' => 'Listado  de Tag adicionales'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.adicional.create'], 
+            ['description' => 'Crear Tag de adicional'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.adicional.edit'], 
+            ['description' => 'Editar Tag de adicional'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.adicional.destroy'], 
+            ['description' => 'Eliminar Tag de adicional'])->syncRoles([$role1]);
+
+        /*Tag Propiedad*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.instalacion.index'], 
+            ['description' => 'Listado de tags de instalaciones'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.instalacion.create'], 
+            ['description' => 'Crear tag de instalacion'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.instalacion.edit'], 
+            ['description' => 'Editar tag de instalacion'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.instalacion.destroy'], 
+            ['description' => 'Eliminar tag de instalacion'])->syncRoles([$role1]);
+
 
     }
 }
