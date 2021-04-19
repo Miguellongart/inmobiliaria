@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\TipoPropiedadController;
 use App\Http\Controllers\Admin\FacilidadController;
 use App\Http\Controllers\Admin\AdicionalController;
 use App\Http\Controllers\Admin\InstalacionController;
+use App\Http\Controllers\Admin\EmpresaController;
  
 Route::get('/admin', [HomeController::class, 'index'])->middleware('can:admin.home')->name('admin.home');
 
@@ -34,4 +35,6 @@ Route::resource('Tipo_propiedad', TipoPropiedadController::class)->names('admin.
 Route::resource('Facilidad', FacilidadController::class)->names('admin.facilidad');
 Route::resource('Adicional', AdicionalController::class)->names('admin.adicional');
 Route::resource('Instalacion', InstalacionController::class)->names('admin.instalacion');
+/*Sobre la empresa datos genericos */
+Route::resource('Empresa', EmpresaController::class)->names('admin.empresa');
 

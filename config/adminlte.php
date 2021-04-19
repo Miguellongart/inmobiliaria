@@ -328,6 +328,11 @@ return [
                 
             ],
         ],
+        [
+            'text'        => 'Empresa',
+            'route'       => 'admin.empresa.index',
+            'icon'        => 'fas fa-tachometer-alt fa-fw',
+        ],
         /*['header' => 'labels'],*/
     ],
 
@@ -448,6 +453,16 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
+                ],
+            ],
+        ],
+        'Texteditor' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdn.ckeditor.com/4.16.0/standard/ckeditor.js',
                 ],
             ],
         ],

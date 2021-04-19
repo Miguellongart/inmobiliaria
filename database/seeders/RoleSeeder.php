@@ -169,6 +169,18 @@ class RoleSeeder extends Seeder
             ['name' => 'admin.instalacion.destroy'], 
             ['description' => 'Eliminar tag de instalacion'])->syncRoles([$role1]);
 
-
+        /*Empresa*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.empresa.index'], 
+            ['description' => 'Listado de Informacion sobre la empresa'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.empresa.create'], 
+            ['description' => 'Agregar nueva informacion sobre empresa'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.empresa.edit'], 
+            ['description' => 'Editar informacion sobre empresa'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.empresa.destroy'], 
+            ['description' => 'Eliminar informacion sobre empresa'])->syncRoles([$role1]);
     }
 }
