@@ -15,7 +15,10 @@ use App\Http\Controllers\Admin\FacilidadController;
 use App\Http\Controllers\Admin\AdicionalController;
 use App\Http\Controllers\Admin\InstalacionController;
 use App\Http\Controllers\Admin\EmpresaController;
- 
+use App\Http\Controllers\Admin\PropiedadController;
+use App\Http\Controllers\Admin\NosotroController;
+use App\Http\Controllers\Admin\ServicioController;
+
 Route::get('/admin', [HomeController::class, 'index'])->middleware('can:admin.home')->name('admin.home');
 
 Route::resource('Usuarios', UserController::class)->names('admin.users');
@@ -35,6 +38,9 @@ Route::resource('Tipo_propiedad', TipoPropiedadController::class)->names('admin.
 Route::resource('Facilidad', FacilidadController::class)->names('admin.facilidad');
 Route::resource('Adicional', AdicionalController::class)->names('admin.adicional');
 Route::resource('Instalacion', InstalacionController::class)->names('admin.instalacion');
+Route::resource('SobreNosotros', NosotroController::class)->names('admin.nosotro');
 /*Sobre la empresa datos genericos */
 Route::resource('Empresa', EmpresaController::class)->names('admin.empresa');
-
+Route::resource('Servicios', ServicioController::class)->names('admin.servicio');
+/*propieda*/
+Route::resource('Propiedad', PropiedadController::class)->names('admin.propiedad');

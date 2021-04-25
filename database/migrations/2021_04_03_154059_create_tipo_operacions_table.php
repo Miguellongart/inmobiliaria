@@ -16,6 +16,7 @@ class CreateTipoOperacionsTable extends Migration
         Schema::create('tipo_operacions', function (Blueprint $table) {
             $table->id();
             $table->string('tipo_operacion');
+            $table->string('tipo_operacion_en');
             $table->timestamps();
         });
     }

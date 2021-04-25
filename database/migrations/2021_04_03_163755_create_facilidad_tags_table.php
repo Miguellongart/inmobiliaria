@@ -16,6 +16,7 @@ class CreateFacilidadTagsTable extends Migration
         Schema::create('facilidad_tags', function (Blueprint $table) {
             $table->id();
             $table->string('facilidad');
+            $table->string('facilidad_en');
             $table->enum('estatus', [1, 0])->default(1);
             $table->timestamps();
         });

@@ -11,19 +11,19 @@
             <li class="nav-item-grid"><a href="{{route('front.proyectos')}}">Proyecto</a></li>
             <li class="nav-item-grid"><a href="{{route('front.vender')}}">Vender</a></li>
             <li class="nav-item-grid"><a href="{{route('front.servicios')}}">Servicio</a></li>
-            <li class="nav-item-grid"><a href="{{route('front.contacto')}}">Contacto</a></li>  
-            @auth      
+            <li class="nav-item-grid"><a href="{{route('front.contacto')}}">Contacto</a></li>
+            @auth
                 <img class="img-profile" src="{{ auth()->user()->profile_photo_url}}" alt="">
-                <li class="nav-item-grid"><a href="">{{ auth()->user()->name}}</a></li> 
+                <li class="nav-item-grid"><a href="">{{ auth()->user()->name}}</a></li>
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
-                    @csrf 
+                    @csrf
                     <li class="nav-item-grid">
                         <a href="" onclick="event.preventDefault();
                         this.closest('form').submit();">
                             <i class="fas fa-power-off"></i>
                         </a>
-                    </li>  
+                    </li>
                 </form>
             @else
                 <li class="nav-item-grid"><a href="{{route('login')}}">Login</a></li>

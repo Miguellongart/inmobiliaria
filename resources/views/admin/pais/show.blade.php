@@ -5,7 +5,6 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 @section('content')
     <section class="content">
@@ -19,7 +18,7 @@
                                 @can('admin.pais.edit')
                                     <a href="{{route('admin.pais.edit', $row->id)}}" class="btn btn-sm btn-primary">
                                         <i class="fas fa-pencil-alt"></i>
-                                    </a>                                    
+                                    </a>
                                 @endcan
                                 @can('admin.pais.destroy')
                                 <form action="{{route('admin.pais.destroy', $row->id)}}" method="POST">
@@ -28,7 +27,7 @@
                                     <button type="submit" title="delete" class="btn btn-danger btn-flat">
                                         <i class="far fa-trash-alt"></i>
                                     </button>
-                                </form>                                 
+                                </form>
                                 @endcan
                             </div>
                         </div>

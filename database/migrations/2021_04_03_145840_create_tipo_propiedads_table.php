@@ -16,6 +16,7 @@ class CreateTipoPropiedadsTable extends Migration
         Schema::create('tipo_propiedads', function (Blueprint $table) {
             $table->id();
             $table->string('tipo_propiedad');
+            $table->string('tipo_propiedad_en');
             $table->timestamps();
         });
     }

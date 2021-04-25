@@ -16,6 +16,7 @@ class CreateInstalacionTagsTable extends Migration
         Schema::create('instalacion_tags', function (Blueprint $table) {
             $table->id();
             $table->string('instalacion');
+            $table->string('instalacion_en');
             $table->enum('estatus', [1, 0])->default(1);
             $table->timestamps();
         });

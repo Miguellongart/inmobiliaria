@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class TipoOperacion extends Model
 {
     use HasFactory;
-    
+
     protected $fillable = [
         'tipo_operacion',
+        'tipo_operacion_en',
     ];
 }

@@ -5,7 +5,6 @@
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('content_header')
@@ -37,7 +36,7 @@
                             @can('admin.user.create')
                                 <a href="{{route('admin.rol.create')}}" class="btn btn-sm btn-success ml-auto">
                                     <i class="fas fa-plus"></i>
-                                </a>                            
+                                </a>
                             @endcan
                         </div>
                         <!-- /.card-header -->
@@ -68,7 +67,7 @@
                                                     @can('admin.rol.show')
                                                     <a href="{{route('admin.rol.show', $item->id)}}" class="btn btn-info btn-flat">
                                                         <i class="far fa-eye"></i>
-                                                    </a> 
+                                                    </a>
                                                     @endcan
                                                     @can('admin.rol.edit')
                                                     <a href="{{route('admin.rol.edit', $item->id)}}" class="btn btn-primary btn-flat">

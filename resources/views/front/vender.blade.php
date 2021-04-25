@@ -1,6 +1,9 @@
 <x-app-layout>
-    <section class="banner-proyecto" style="background-image: url({{asset('front/img/fondo.png')}})">
-        <h2 class="title-banner">"Oportunidaes para invertir o vivir"</h2>
+    @section('cssfront')
+        <link rel="stylesheet" href="{{ mix('css/vender.css') }}">
+    @endsection
+    <section class="banner-vender" style="background-image: url({{asset('front/img/fondo.png')}})">
+        <h2 class="title-banner">¿Quieres vender?</h2>
         <div class="container">
             <div class="redes d-flex flex-column justify-content-end">
                 <i class="fab fa-facebook-f"></i>
@@ -11,7 +14,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="como-vender">
         <div class="container">
             <div class="row">
@@ -38,5 +41,5 @@
             </div>
         </div>
     </section>
-    
+
 </x-app-layout>

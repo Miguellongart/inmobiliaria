@@ -10,7 +10,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="destacados">
         <div class="container">
             <h2 class="text-center m-2">Destacados</h2>
@@ -20,16 +20,13 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
+
                         </div>
                     </div>
                 </div>
@@ -38,16 +35,13 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
+
                         </div>
                     </div>
                 </div>
@@ -56,16 +50,13 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
+
                         </div>
                     </div>
                 </div>
@@ -74,16 +65,13 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
+
                         </div>
                     </div>
                 </div>
@@ -91,10 +79,10 @@
         </div>
     </section>
 
-    <section class="banner-home-medio" style="background-image: url({{asset('front/img/Hacemos.jpg')}})">        
-        <h2 class="title-banner">"Hacemos tus sueño Inmobiliario realidad"</h2>        
+    <section class="banner-home-medio" style="background-image: url({{asset('front/img/Hacemos.jpg')}})">
+        <h2 class="title-banner">"Hacemos tus sueño Inmobiliario realidad"</h2>
     </section>
-    
+
     <section class="new-inmobiliaria">
         <div class="container">
             <div class="row justify-content-center">
@@ -103,16 +91,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -121,16 +105,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -139,16 +119,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -157,16 +133,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -175,16 +147,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -193,16 +161,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -211,16 +175,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -229,16 +189,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -246,7 +202,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="contacto" style="background-image: url({{asset('front/img/contactanos.jpg')}})">
         <div class="container">
             <div class="row">
@@ -272,16 +228,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -290,16 +242,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -308,16 +256,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>
@@ -326,16 +270,12 @@
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones</p>
-                            <p>1 baño</p>
-                            <p>2 Estacionamientos</p>
+                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
+                            <p>1 baño <i class="fas fa-bath"></i></p>
+                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
                             <p>Antiguedad</p>
                             <p>Vista</p>
-                            <p>Antiguedad</p>
-                            <div class="row justify-content-between mt-3">
-                                <a href="#" class="btn btn-sm btn-primary" style="margin-left: 15px;">Ver</a>
-                                <p class="prop">PROP. N° 297</p>
-                            </div>
+                            <p class="prop mt-3">PROP. N° 297</p>
                         </div>
                     </div>
                 </div>

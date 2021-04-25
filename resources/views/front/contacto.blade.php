@@ -1,6 +1,10 @@
 <x-app-layout>
+    @section('cssfront')
+        <link rel="stylesheet" href="{{ mix('css/contacto.css') }}">
+        <link rel="stylesheet" href="{{ mix('css/proyectos.css') }}">
+    @endsection
     <section class="banner-proyecto" style="background-image: url({{asset('front/img/fondo.png')}})">
-        <h2 class="title-banner">"Oportunidaes para invertir o vivir"</h2>
+        <h2 class="title-proyecto">"Oportunidaes para invertir o vivir"</h2>
         <div class="container">
             <div class="redes d-flex flex-column justify-content-end">
                 <i class="fab fa-facebook-f"></i>
@@ -8,6 +12,42 @@
                 <i class="fab fa-telegram-plane"></i>
                 <i class="fab fa-instagram"></i>
                 <i class="fas fa-phone-alt"></i>
+            </div>
+        </div>
+    </section>
+    <div class="container my-4 py-3">
+        <h3 class="text-center" style="font-size: 35px;font-weight: 900;color: #9c9c03;">Contacto</h3>
+        <div class="row">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid architecto commodi ipsa nihil numquam perspiciatis! Amet commodi magni necessitatibus similique vitae. Blanditiis consectetur itaque magni minus odit sint velit.
+        </div>
+
+    </div>
+    <section class="contactanos">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1958.3919697881274!2d-63.821073998480635!3d10.979674549489447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c318efce47b4d85%3A0x2409248093273f7e!2sCalle%20Los%20Uveros%2C%20Porlamar%206301%2C%20Nueva%20Esparta%2C%20Venezuela!5e0!3m2!1ses-419!2sar!4v1619051845034!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="container">
+            <div class="formulario">
+                <h2>Contactanos</h2>
+                <p>Comunicate para obtener mas informacion sobre nuestros variados servicios</p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="asunto" aria-describedby="emailHelp" placeholder="Asunto">
+                    </div>
+                    <div class="form-group">
+                        <select name="" id="" style="width: 100%">
+                            <option value="">Tipo de Servicio</option>
+                            <option value="">Servicio 1</option>
+                            <option value="">Servicio 1</option>
+                            <option value="">Servicio 1</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" id="" rows="5" style="width: 100%"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-contacto">Enviar</button>
+                </form>
             </div>
         </div>
     </section>

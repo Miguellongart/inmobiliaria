@@ -1,0 +1,36 @@
+.banner-servicios{
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.banner-servicios h2.title-banner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--amarillo);
+    text-align: center;
+}
+
+.nuestrosservicios{
+    padding: 50px 0px;
+    margin: 50px 0px;
+}
+.nuestrosservicios img{
+    width: 100%;
+}
+.nuestrosservicios h2{
+    color: black;
+    font-weight: bold;
+    font-size: 28px;
+    padding: 10px 5px;
+}
+.nuestrosservicios p{
+    color: black;
+    text-align: justify;
+    padding: 10px 5px;
+}

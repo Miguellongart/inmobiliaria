@@ -1,6 +1,9 @@
 <x-app-layout>
-    <section class="banner-proyecto" style="background-image: url({{asset('front/img/fondo.png')}})">
-        <h2 class="title-banner">"Oportunidaes para invertir o vivir"</h2>
+    @section('cssfront')
+        <link rel="stylesheet" href="{{ mix('css/proyectos.css') }}">
+    @endsection
+    <section class="banner-proyecto" style="background-image: url({{asset('front/img/bannerproyectos.jpg')}})">
+        <h2 class="title-banner">"Oportunidades para Invertir o vivir"</h2>
         <div class="container">
             <div class="redes d-flex flex-column justify-content-end">
                 <i class="fab fa-facebook-f"></i>
@@ -11,7 +14,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="proyectos">
         <div class="container">
             <div class="row">
@@ -49,7 +52,7 @@
                     <div class="card mb-3" style="width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-6">
-                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" style="height: 235px;" alt="...">
+                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
@@ -79,7 +82,7 @@
                     <div class="card mb-3" style="width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-6">
-                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" style="height: 235px;" alt="...">
+                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
@@ -109,7 +112,7 @@
                     <div class="card mb-3" style="width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-6">
-                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" style="height: 235px;" alt="...">
+                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
@@ -139,7 +142,7 @@
                     <div class="card mb-3" style="width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-6">
-                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" style="height: 235px;" alt="...">
+                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
@@ -169,7 +172,7 @@
                     <div class="card mb-3" style="width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-6">
-                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" style="height: 235px;" alt="...">
+                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
@@ -199,7 +202,7 @@
                     <div class="card mb-3" style="width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-6">
-                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" style="height: 235px;" alt="...">
+                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
@@ -229,7 +232,7 @@
                     <div class="card mb-3" style="width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-6">
-                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" style="height: 235px;" alt="...">
+                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">
@@ -259,7 +262,7 @@
                     <div class="card mb-3" style="width: 100%;">
                         <div class="row no-gutters">
                             <div class="col-md-6">
-                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" style="height: 235px;" alt="...">
+                                <img src="{{asset('front/img/fondo.png')}}" class="d-block w-100" alt="...">
                             </div>
                             <div class="col-md-6">
                                 <div class="card-body">

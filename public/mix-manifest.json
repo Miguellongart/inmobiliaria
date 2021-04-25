@@ -2,9 +2,12 @@
     "/js/app.js": "/js/app.js",
     "/js/navbar.js": "/js/navbar.js",
     "/admin/js/admin.js": "/admin/js/admin.js",
+    "/css/custom.css": "/css/custom.css",
+    "/css/vender.css": "/css/vender.css",
+    "/css/contacto.css": "/css/contacto.css",
+    "/css/proyectos.css": "/css/proyectos.css",
+    "/css/navbar.css": "/css/navbar.css",
     "/css/app.css": "/css/app.css",
     "/css/footer.css": "/css/footer.css",
-    "/css/proyectos.css": "/css/proyectos.css",
-    "/css/custom.css": "/css/custom.css",
-    "/css/navbar.css": "/css/navbar.css"
+    "/css/servicios.css": "/css/servicios.css"
 }

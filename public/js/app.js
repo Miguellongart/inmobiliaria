@@ -21047,6 +21047,45 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
 
 /***/ }),
 
+/***/ "./resources/css/servicios.css":
+/*!*************************************!*\
+  !*** ./resources/css/servicios.css ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/footer.css":
+/*!**********************************!*\
+  !*** ./resources/css/footer.css ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/css/navbar.css":
 /*!**********************************!*\
   !*** ./resources/css/navbar.css ***!
@@ -21086,10 +21125,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/css/footer.css":
-/*!**********************************!*\
-  !*** ./resources/css/footer.css ***!
-  \**********************************/
+/***/ "./resources/css/contacto.css":
+/*!************************************!*\
+  !*** ./resources/css/contacto.css ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21099,10 +21138,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/css/app.css":
-/*!*******************************!*\
-  !*** ./resources/css/app.css ***!
-  \*******************************/
+/***/ "./resources/css/vender.css":
+/*!**********************************!*\
+  !*** ./resources/css/vender.css ***!
+  \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -21394,6 +21433,9 @@ process.umask = function() { return 0; };
 /******/ 			["./resources/css/navbar.css"],
 /******/ 			["./resources/css/custom.css"],
 /******/ 			["./resources/css/proyectos.css"],
+/******/ 			["./resources/css/contacto.css"],
+/******/ 			["./resources/css/vender.css"],
+/******/ 			["./resources/css/servicios.css"],
 /******/ 			["./resources/css/footer.css"],
 /******/ 			["./resources/css/app.css"]
 /******/ 		];

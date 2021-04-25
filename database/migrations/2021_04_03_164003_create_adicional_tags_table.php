@@ -16,6 +16,7 @@ class CreateAdicionalTagsTable extends Migration
         Schema::create('adicional_tags', function (Blueprint $table) {
             $table->id();
             $table->string('adicional');
+            $table->string('adicional_en');
             $table->enum('estatus', [1, 0])->default(1);
             $table->timestamps();
         });

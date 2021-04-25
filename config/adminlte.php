@@ -296,6 +296,12 @@ return [
             'icon'    => 'fas fa-house-user',
             'submenu' => [
                 [
+                    'text'        => 'Propiedades',
+                    'route'       => 'admin.propiedad.index',
+                    'icon'        => 'fas fa-hotel',
+                    /*'can'         => 'admin.t_propiedad.index',*/
+                ],
+                [
                     'text'        => 'Tipo de propiedad',
                     'route'       => 'admin.t_propiedad.index',
                     'icon'        => 'fas fa-hotel',
@@ -325,12 +331,22 @@ return [
                         ],
                     ],
                 ],
-                
+
             ],
         ],
         [
             'text'        => 'Empresa',
             'route'       => 'admin.empresa.index',
+            'icon'        => 'fas fa-tachometer-alt fa-fw',
+        ],
+        [
+            'text'        => 'Servicios',
+            'route'       => 'admin.servicio.index',
+            'icon'        => 'fas fa-tachometer-alt fa-fw',
+        ],
+        [
+            'text'        => 'Sobre Nosotros',
+            'route'       => 'admin.nosotro.index',
             'icon'        => 'fas fa-tachometer-alt fa-fw',
         ],
         /*['header' => 'labels'],*/
@@ -425,7 +441,7 @@ return [
                     'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
                 ],
             ],
-        ],        
+        ],
         'Toastr' => [
             'active' => true,
             'files' => [
@@ -463,6 +479,21 @@ return [
                     'type' => 'js',
                     'asset' => false,
                     'location' => '//cdn.ckeditor.com/4.16.0/standard/ckeditor.js',
+                ],
+            ],
+        ],
+        'Dropzone' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.css',
+                ],
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.js',
                 ],
             ],
         ],
