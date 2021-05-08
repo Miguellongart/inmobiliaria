@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\FrontController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,22 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('front.index');
-});
-Route::get('/proyectos', function () {
-    return view('front.proyectos');
-})->name('front.proyectos');
-Route::get('/vender', function () {
-    return view('front.vender');
-})->name('front.vender');
-Route::get('/servicios', function () {
-    return view('front.servicios');
-})->name('front.servicios');
-Route::get('/contacto', function () {
-    return view('front.contacto');
-})->name('front.contacto');
+Route::get('/', [FrontController::class, 'index'])->name('front.index');
+Route::get('/Proyectos', [FrontController::class, 'proyectos'])->name('front.proyectos');
+Route::get('/Vender', [FrontController::class, 'vender'])->name('front.vender');
+Route::get('/Servicios', [FrontController::class, 'servicios'])->name('front.servicios');
+Route::get('/Contacto', [FrontController::class, 'contacto'])->name('front.contacto');
+Route::get('/Propiedad/{slug}', [FrontController::class, 'detallePropiedad'])->name('front.detailprop');
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

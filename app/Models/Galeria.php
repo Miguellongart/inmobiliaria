@@ -14,6 +14,6 @@ class Galeria extends Model
     ];
     public function propiedad()
     {
-        return $this->belongsToMany(Propiedad::class);
+        return $this->belongsToMany(Propiedad::class,'galerias_propiedads', 'galeria_id','propiedad_id');
     }
 }

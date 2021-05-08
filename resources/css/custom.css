@@ -34,7 +34,7 @@ body {
 /*destacados home*/
 .destacados{
     padding: 40px 0px;
-    margin: 15px 0px;
+    margin: 15px 100px;
 }
 .destacados .card{
     border-radius: 10px;
@@ -44,7 +44,7 @@ body {
     height: 180px;
     margin: 5px;
     border-radius: 10px;
-    width: 278px;
+    width: 246px;
 }
 .destacados .card, .card-body p{
     color:var(--negro);
@@ -83,7 +83,7 @@ body {
 /*inmobiliaria*/
 .new-inmobiliaria{
     padding: 40px 0px;
-    margin: 15px 0px;
+    margin: 15px 100px;
 }
 .new-inmobiliaria .card{
     border-radius: 10px;
@@ -93,7 +93,7 @@ body {
     height: 180px;
     margin: 5px;
     border-radius: 10px;
-    width: 278px;
+    width: 246px;
 }
 .new-inmobiliaria .card, .card-body p{
     color:var(--negro);
@@ -132,7 +132,7 @@ body {
 /*Nuevo proyecto*/
 .new-proyect{
     padding: 40px 0px;
-    margin: 15px 0px;
+    margin: 15px 100px;
 }
 .new-proyect .card{
     border-radius: 10px;
@@ -142,7 +142,7 @@ body {
     height: 180px;
     margin: 5px;
     border-radius: 10px;
-    width: 278px;
+    width: 246px;
 }
 .new-proyect .card, .card-body p{
     color:var(--negro);

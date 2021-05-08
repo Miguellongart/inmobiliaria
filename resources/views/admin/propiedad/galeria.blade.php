@@ -36,8 +36,9 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="{{route('admin.propiedad.store')}}" method="POST" enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
-                            @include('admin.propiedad.form', ['btnText'=>'Guardar'])
+                        <form action="{{route('admin.propiedad.dropzonestore')}}" method="POST" enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
+                            @csrf
+                            <input type="hidden" name="id" value="{{$propiedad_id}}">
                         </form>
                     </div>
                 </div>
@@ -48,14 +49,6 @@
 
 @section('js')
     <script>
-        $("#t_propiedad_id").select2();
-        $("#t_operacion_id").select2();
-        $("#estado_propiedad").select2();
-        $("#t_vista").select2();
-        $("#estatus").select2();
-        $("#user_id").select2();
-        CKEDITOR.replace('descripcion');
-
         Dropzone.options.myAwesomeDropzone = {
             headers:{
                 'X-CSRF-TOKEN' : "{{csrf_token()}}"
@@ -65,25 +58,5 @@
             acceptedFiles: "image/*",
             maxFiles: 4,
         };
-
-        
-        $('#category_id').change(getSubcategories);
-        function getSubcategories() {
-            let category_id = $('#category_id').val();
-            let url = base_url + 'ecommerce/product/json/' + category_id;
-            $.getJSON(url, function(data) {
-                if(data.data){
-                    options = '<option value="">Selecciona</option>';
-                    $("#subcategory_id option").remove();
-                    $.each(data.data, function(key, val) {
-                        options = options + "<option value='"+val.subcategory_id+"'>"+ val.name +"</option>";
-                    });
-                }
-                else{
-                    options = options + "<option value='0'>Sin resultados</option>";
-                }       
-                $("#subcategory_id").append(options);
-            });
-        }
     </script>
 @stop

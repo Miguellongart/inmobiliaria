@@ -22,6 +22,7 @@ mix
     .postCss('resources/css/contacto.css', 'public/css')
     .postCss('resources/css/vender.css', 'public/css')
     .postCss('resources/css/servicios.css', 'public/css')
+    .postCss('resources/css/detallePropiedad.css', 'public/css')
     .postCss('resources/css/footer.css', 'public/css')
 
     .postCss('resources/css/app.css', 'public/css', [

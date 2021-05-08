@@ -51,6 +51,29 @@
     <script>
         $("#t_propiedad_id").select2();
         $("#t_operacion_id").select2();
-        $("#estado").select2();
+        $("#estado_propiedad").select2();
+        $("#t_vista").select2();
+        $("#estatus").select2();
+        $("#user_id").select2();
+        CKEDITOR.replace('descripcion');
+        
+        $('#category_id').change(getSubcategories);
+        function getSubcategories() {
+            let category_id = $('#category_id').val();
+            let url = base_url + 'ecommerce/product/json/' + category_id;
+            $.getJSON(url, function(data) {
+                if(data.data){
+                    options = '<option value="">Selecciona</option>';
+                    $("#subcategory_id option").remove();
+                    $.each(data.data, function(key, val) {
+                        options = options + "<option value='"+val.subcategory_id+"'>"+ val.name +"</option>";
+                    });
+                }
+                else{
+                    options = options + "<option value='0'>Sin resultados</option>";
+                }       
+                $("#subcategory_id").append(options);
+            });
+        }
     </script>
 @stop

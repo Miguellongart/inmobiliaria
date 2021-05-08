@@ -44,3 +44,6 @@ Route::resource('Empresa', EmpresaController::class)->names('admin.empresa');
 Route::resource('Servicios', ServicioController::class)->names('admin.servicio');
 /*propieda*/
 Route::resource('Propiedad', PropiedadController::class)->names('admin.propiedad');
+Route::get('/Galeria/{id}/propiedad', [PropiedadController::class, 'galeriaForm'])->name('admin.propiedad.addGal');
+Route::post('/PropiedadGaleria/store', [PropiedadController::class, 'dropzoneStore'])->name('admin.propiedad.dropzonestore');
+

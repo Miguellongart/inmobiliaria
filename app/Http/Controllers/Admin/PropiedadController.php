@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\PropiedadStoreRequest;
 use App\Models\Adicional_tag;
 use App\Models\Facilidad_tag;
+use App\Models\Galeria;
 use App\Models\Instalacion_tag;
 use App\Models\Propiedad;
 use App\Models\TipoOperacion;
@@ -39,6 +40,29 @@ class PropiedadController extends Controller
         ]);
     }
 
+    public function galeriaForm($id)
+    {
+        $title = 'Añadir Imagenes a Propiedad';
+        return view('admin.propiedad.galeria', [
+            'title' => $title,
+            'propiedad_id' => $id,
+        ]);
+    }
+
+    public function dropzoneStore(Request $request)
+    {
+        $image = $request->file('file');
+        if($image){
+            $imageName = time().'.'.$image->extension();
+            $image->move(public_path('img/galeria'),$imageName);
+        }
+        $galeria = new Galeria();
+        $galeria->imagen = $imageName;
+        $galeria->save();
+
+        $galeria->propiedad()->sync($request->get('id'));
+        return response()->json(['success'=>$imageName]);
+    }
     public function store(Request $request)
     {
         $tr = new GoogleTranslate('en');
@@ -59,6 +83,15 @@ class PropiedadController extends Controller
             'imagen_p'                      => 'mimes:jpg,jpeg,png',
             'estatus'                       => 'required|in:BORRADOR,PUBLICADO',
         ]);
+
+        //IMAGE
+        $image = $request->file('imagen_p');
+        if($image){
+            $image = $request->file('imagen_p');
+            $imageName = 'img/propiedad/'.time().'.'.$image->extension();
+            $image->move(public_path('img/propiedad'),$imageName);
+        }
+
         $prop = new Propiedad();
         $prop->codigo = $request->codigo;
         $prop->titulo = $request->titulo;
@@ -78,6 +111,7 @@ class PropiedadController extends Controller
         $prop->estatus = $request->estatus;
         $prop->video = $request->video;
         $prop->nota = $request->nota;
+        $prop->imagen_p = $imageName;
 
         $prop->titulo_en = $tr->translate($request->titulo);
         $prop->slug_en = $tr->translate($request->slug);
@@ -90,12 +124,7 @@ class PropiedadController extends Controller
         $prop->t_propiedad_id = $request->t_propiedad_id;
         $prop->t_operacion_id = $request->t_operacion_id;
         $prop->save();
-        //IMAGE
-        $image = $request->file('imagen_p');
-        if($image){
-            $path = Storage::disk('public')->put('img/propiedad',  $image);
-            $prop->fill(['imagen_p' => asset($path)])->save();
-        }
+
         //TAGS
         $prop->adicional_tag()->sync($request->get('adicional'));
         $prop->facilidad_tag()->sync($request->get('facilidad'));
@@ -144,6 +173,14 @@ class PropiedadController extends Controller
             'imagen_p'                      => 'mimes:jpg,jpeg,png',
             'estatus'                       => 'required|in:BORRADOR,PUBLICADO',
         ]);
+
+        //IMAGE
+        $image = $request->file('imagen_p');
+        if($image){
+            $imageName = time().'.'.$image->extension();
+            $image->move(public_path('img/propiedad'),$imageName);
+        }
+
         $prop = Propiedad::find($id);
         $prop->codigo = $request->codigo;
         $prop->titulo = $request->titulo;
@@ -163,6 +200,7 @@ class PropiedadController extends Controller
         $prop->estatus = $request->estatus;
         $prop->video = $request->video;
         $prop->nota = $request->nota;
+        $prop->imagen_p = $imageName;
 
         $prop->titulo_en = $tr->translate($request->titulo);
         $prop->slug_en = $tr->translate($request->slug);
@@ -175,12 +213,6 @@ class PropiedadController extends Controller
         $prop->t_propiedad_id = $request->t_propiedad_id;
         $prop->t_operacion_id = $request->t_operacion_id;
         $prop->save();
-        //IMAGE
-        $image = $request->file('imagen_p');
-        if($image){
-            $path = Storage::disk('public')->put('img/propiedad',  $image);
-            $prop->fill(['imagen_p' => asset($path)])->save();
-        }
         //TAGS
         $prop->adicional_tag()->sync($request->get('adicional'));
         $prop->facilidad_tag()->sync($request->get('facilidad'));

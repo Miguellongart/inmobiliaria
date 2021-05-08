@@ -45,9 +45,11 @@
                                 <thead>
                                 <tr>
                                     <th>N°</th>
-                                    <th>Nombre(Ingles)</th>
-                                    <th>Nombre</th>
-                                    <th>Formato (ISO)</th>
+                                    <th>Propiedad</th>
+                                    <th>Vendedor</th>
+                                    <th>USD</th>
+                                    <th>BsS</th>
+                                    <th>Estatus</th>
                                     @canany(['admin.propiedad.show', 'admin.propiedad.destroy'])
                                         <th>Action</th>
                                     @endcan
@@ -59,11 +61,18 @@
                                         <tr>
                                             <td>{{$row->id}}</td>
                                             <td>{{$row->titulo}}</td>
-                                            <td>{{$row->estado}}</td>
-                                            <td>{{$row->imagen}}</td>
+                                            <td>{{$row->user->name}}</td>
+                                            <td>{{$row->precio_USD}}</td>
+                                            <td>{{$row->precio_BS}}</td>
+                                            <td>{{$row->estatus}}</td>
                                             @canany(['admin.propiedad.edit', 'admin.propiedad.destroy'])
                                                 <td>
                                                     <div class="btn-group">
+                                                        @can('admin.propiedad.create')
+                                                            <a href="{{route('admin.propiedad.addGal', $row->id)}}" class="btn btn-sm btn-warning btn-flat">
+                                                                <i class="far fa-images"></i>
+                                                            </a>
+                                                        @endcan
                                                         @can('admin.propiedad.edit')
                                                             <a href="{{route('admin.propiedad.show', $row->id)}}" class="btn btn-info btn-flat">
                                                                 <i class="far fa-eye"></i>

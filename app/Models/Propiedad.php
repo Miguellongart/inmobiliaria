@@ -41,6 +41,10 @@ class Propiedad extends Model
 
 
 ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
     public function adicional_tag()
     {
         return $this->belongsToMany(Adicional_tag::class,'adicionals_propiedads','propiedad_id', 'adicional_id');
@@ -55,6 +59,6 @@ class Propiedad extends Model
     }
     public function galeria()
     {
-        return $this->belongsToMany(Galeria::class);
+        return $this->belongsToMany(Galeria::class,'galerias_propiedads','propiedad_id', 'galeria_id');
     }
 }

@@ -21060,6 +21060,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/css/detallePropiedad.css":
+/*!********************************************!*\
+  !*** ./resources/css/detallePropiedad.css ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/css/footer.css":
 /*!**********************************!*\
   !*** ./resources/css/footer.css ***!
@@ -21436,6 +21449,7 @@ process.umask = function() { return 0; };
 /******/ 			["./resources/css/contacto.css"],
 /******/ 			["./resources/css/vender.css"],
 /******/ 			["./resources/css/servicios.css"],
+/******/ 			["./resources/css/detallePropiedad.css"],
 /******/ 			["./resources/css/footer.css"],
 /******/ 			["./resources/css/app.css"]
 /******/ 		];
