@@ -9,10 +9,17 @@ class FrontController extends Controller
 {
     public function index(){
         //dd('hola');
-        $propiedades = Propiedad::all();
+        $propiedades = Propiedad::where('estatus','=', 'PUBLICADO')
+                                ->where('destacado','=', 'SI')
+                                ->take(4)
+                                ->get();
         return view('front.index', compact('propiedades'));
     }
 
+    public function propiedades(){
+        $propiedades = Propiedad::where('estatus','=', 'PUBLICADO')->paginate(10);
+        return view('front.propiedades', compact('propiedades'));
+    }
     public function vender(){
         //dd('hola');
         return view('front.vender');
@@ -35,5 +42,21 @@ class FrontController extends Controller
         $detalleProp = Propiedad::where('slug', $id)->first();
         return view('front.detallePropiedad',compact('detalleProp'));
     }
+    public function filter(Request $request)
+    {
+        $gender = $request->input('gender');
 
+        //You should validate these inputs your way
+
+        $query = Employe::query();
+
+        if (!empty($gender)) {
+            $query->where('gender', $gender);
+        }
+        $collection = $query->get();
+
+        return view('my-view', [
+            'employees' => $collection,
+        ]);
+    }
 }

@@ -8,6 +8,7 @@ use App\Models\Adicional_tag;
 use App\Models\Facilidad_tag;
 use App\Models\Galeria;
 use App\Models\Instalacion_tag;
+use App\Models\Pais;
 use App\Models\Propiedad;
 use App\Models\TipoOperacion;
 use App\Models\TipoPropiedad;
@@ -36,6 +37,7 @@ class PropiedadController extends Controller
             'adicional' => Adicional_tag::all(),
             'facilidad' => Facilidad_tag::all(),
             'usuarios' => User::all(),
+            'pais' => Pais::all(),
             'title' => $title,
         ]);
     }
@@ -112,6 +114,12 @@ class PropiedadController extends Controller
         $prop->video = $request->video;
         $prop->nota = $request->nota;
         $prop->imagen_p = $imageName;
+        $prop->destacado = $request->destacado;
+
+        $prop->pais_id = $request->pais_id;
+        $prop->estado_id = $request->estado_id;
+        $prop->municipio_id = $request->municipio_id;
+        $prop->sector_id = $request->sector_id;
 
         $prop->titulo_en = $tr->translate($request->titulo);
         $prop->slug_en = $tr->translate($request->slug);

@@ -30,7 +30,19 @@ body {
     color: var(--blanco);
     margin: 5px 10px;
 }
-
+.buscador{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    top: 445px;
+}
+.buscadorPropiedades{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
 /*destacados home*/
 .destacados{
     padding: 40px 0px;

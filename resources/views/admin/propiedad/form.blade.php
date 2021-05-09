@@ -1,10 +1,7 @@
 @csrf
-<div class="row">
-    <button type="submit" class="btn btn-primary mx-2">{{$btnText}}</button>
-    <a href="{{route('admin.propiedad.index')}}" class="btn btn-danger">Cancelar</a>
-</div>
 <div class="card-body">
     <div class="row">
+        <!--row1-->
         <div class="form-group col-12 col-sm-12 col-md-4">
             <label for="titulo">Titulo<span style="color: red">*</span></label>
             <input type="text" class="form-control" name="titulo" value="{{old('titulo',$row->titulo)}}" id="titulo" placeholder="Titulo">
@@ -15,8 +12,37 @@
         </div>
         <div class="form-group col-12 col-sm-12 col-md-4">
             <label for="slug">Slug<span style="color: red">*</span></label>
-            <input type="text" class="form-control" name="slug" value="titulo" id="slug" placeholder="Slug" readonly>
+            <input type="text" class="form-control" name="slug" value="" id="slug" readonly>
         </div>
+
+        <!--row2-->
+        <div class="form-group col-12 col-sm-12 col-md-3">
+            <label>Pais<span style="color: red">*</span></label>
+            <select name="pais_id" class="custom-select" id="pais_id">
+                <option>Seleccione una Opcion</option>
+                @foreach ($pais as $p)
+                    <option value="{{$p->id}}">
+                        {{$p->nombre}}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group col-12 col-sm-12 col-md-3">
+            <label>Estado<span style="color: red">*</span></label>
+            <select name="estado_id" class="custom-select" id="estado_id">
+            </select>
+        </div>
+        <div class="form-group col-12 col-sm-12 col-md-3">
+            <label>Municipio<span style="color: red">*</span></label>
+            <select name="municipio_id" class="custom-select" id="municipio_id">
+            </select>
+        </div>
+        <div class="form-group col-12 col-sm-12 col-md-3">
+            <label>Localidad<span style="color: red">*</span></label>
+            <select name="sector_id" class="custom-select" id="localidad_id">
+            </select>
+        </div>
+        <!--row3-->
         <div class="form-group col-12 col-sm-12 col-md-6">
             <div class="row">
                 <div class="col-4">
@@ -117,15 +143,22 @@
         <div class="form-group col-12 col-sm-12 col-md-4">
             <label>Tipo De Vista</label>
             <select name="t_vista" class="custom-select" id="t_vista">
-                <option value="Obra Gris">Obra Gris</option>
-                <option value="Obra blanca">Obra blanca</option>
-                <option value="Lista para habitar">Lista para habitar</option>
-                <option value="A reformar">A reformar</option>
+                <option @if($row->t_vista) selected @endif value="Obra Gris">Obra Gris</option>
+                <option @if($row->t_vista) selected @endif value="Obra blanca">Obra blanca</option>
+                <option @if($row->t_vista) selected @endif value="Lista para habitar">Lista para habitar</option>
+                <option @if($row->t_vista) selected @endif value="A reformar">A reformar</option>
             </select>
         </div>
         <div class="form-group col-12 col-sm-12 col-md-4">
             <label for="nota">Nota<span style="color: red">*</span></label>
             <input type="text" class="form-control" name="nota" value="{{old('nota',$row->nota)}}" id="nota" placeholder="Nota">
+        </div>
+        <div class="form-group col-12 col-sm-12 col-md-4">
+            <label>Destacado</label>
+            <select name="destacado" class="custom-select" id="destacado">
+                <option @if($row->destacado) selected @endif value="SI">Si</option>
+                <option @if($row->destacado) selected @endif value="NO">No</option>
+            </select>
         </div>
         <div class="form-group col-12 col-sm-12 col-md-12">
             <label for="nota">Descripcion<span style="color: red">*</span></label>
@@ -187,3 +220,9 @@
     </div>
 </div>
 <!-- /.card-body -->
+<div class="row">
+    <div class="m-3">
+        <button type="submit" class="btn btn-primary mx-2">{{$btnText}}</button>
+        <a href="{{route('admin.propiedad.index')}}" class="btn btn-danger">Cancelar</a>
+    </div>
+</div>

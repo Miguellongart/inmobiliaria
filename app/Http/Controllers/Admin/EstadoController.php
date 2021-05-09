@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Estado;
 use App\Models\Pais;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
 class EstadoController extends Controller
@@ -25,18 +26,26 @@ class EstadoController extends Controller
             'title' => $title,
         ]);
     }
+    public function addestado($id){
+        $title = 'Estado';
+        return view('admin.estado.addestado', [
+            'row' => new Estado(),
+            'pais' => Pais::find($id),
+            'title' => $title,
+        ]);
+    }
 
     public function store(Request $request)
     {
         $request->validate([
             'estado' => 'required',
             'pais_id' => 'required',
-        ]); 
+        ]);
 
         $row = new Estado($request->all());
         $row->save();
         return redirect()->route('admin.estado.show', $row->id)->with('success', 'Guardado con Exito');
-        
+
     }
 
     public function show($id)
@@ -63,7 +72,7 @@ class EstadoController extends Controller
         $request->validate([
             'estado' => 'required',
             'pais_id' => 'required',
-        ]); 
+        ]);
 
         $row = Estado::findOrFail($id);
         $row->update($request->all());

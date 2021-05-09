@@ -17,10 +17,14 @@ class Pais extends Model
         'iso3',
         'phone_code'
     ];
-    
+
     public function estado()
     {
         return $this->hasMany(Estado::class, 'pais_id', 'id');
     }
-    
+    public function propiedad()
+    {
+        return $this->belongsTo(Propiedad::class);
+    }
+
 }

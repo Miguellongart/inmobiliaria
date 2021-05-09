@@ -40,6 +40,7 @@ class CreatePropiedadsTable extends Migration
             $table->string('precio_PTR')->nullable();
             $table->string('precio_USD')->nullable();
             $table->enum('estatus', ['PUBLICADO', 'BORRADOR'])->default('BORRADOR');
+            $table->enum('destacado', ['SI', 'NO'])->default('NO');
 
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('t_propiedad_id');
@@ -48,6 +49,16 @@ class CreatePropiedadsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('t_propiedad_id')->references('id')->on('tipo_propiedads')->onUpdate('cascade')->onDelete('cascade');
             $table->foreign('t_operacion_id')->references('id')->on('tipo_operacions')->onUpdate('cascade')->onDelete('cascade');
+
+            $table->unsignedBigInteger('pais_id');
+            $table->unsignedBigInteger('estado_id');
+            $table->unsignedBigInteger('municipio_id');
+            $table->unsignedBigInteger('sector_id');
+            $table->foreign('pais_id')->references('id')->on('pais')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('estado_id')->references('id')->on('estados')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('municipio_id')->references('id')->on('municipios')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('sector_id')->references('id')->on('sectors')->onUpdate('cascade')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

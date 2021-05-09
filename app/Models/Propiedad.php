@@ -38,7 +38,11 @@ class Propiedad extends Model
         'user_id',
         't_propiedad_id',
         't_operacion_id',
-
+        'destacado',
+        'pais_id',
+        'estado_id',
+        'municipio_id',
+        'sector_id',
 
 ];
     public function user()
@@ -60,5 +64,21 @@ class Propiedad extends Model
     public function galeria()
     {
         return $this->belongsToMany(Galeria::class,'galerias_propiedads','propiedad_id', 'galeria_id');
+    }
+    public function pais()
+    {
+        return $this->hasMany(Pais::class);
+    }
+    public function estado()
+    {
+        return $this->hasMany(Estado::class);
+    }
+    public function municipio()
+    {
+        return $this->hasMany(Municipio::class);
+    }
+    public function localidad()
+    {
+        return $this->hasMany(Sector::class,);
     }
 }

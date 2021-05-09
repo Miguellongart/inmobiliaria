@@ -14,6 +14,7 @@ use App\Http\Controllers\FrontController;
 |
 */
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
+Route::get('/Propiedades', [FrontController::class, 'propiedades'])->name('front.propiedades');
 Route::get('/Proyectos', [FrontController::class, 'proyectos'])->name('front.proyectos');
 Route::get('/Vender', [FrontController::class, 'vender'])->name('front.vender');
 Route::get('/Servicios', [FrontController::class, 'servicios'])->name('front.servicios');

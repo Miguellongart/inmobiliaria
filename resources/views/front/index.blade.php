@@ -8,27 +8,39 @@
                 <i class="fab fa-instagram"></i>
                 <i class="fas fa-phone-alt"></i>
             </div>
-            <form action="" style="display: flex;justify-content: center;align-items: end;">
-                <div class="form-group">
-                    <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none; border-radius: 50px 0px 0px 50px" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px;border-radius: 0px 50px 50px 0px" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+            <form action="" class="buscador">
+                <div class="container">
+                    <div class="row  justify-content-center">
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none; border-radius: 50px 0px 0px 50px" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px;border-radius: 0px 50px 50px 0px" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center" style="margin-top: -16px;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none; border-radius: 50px 0px 0px 50px" id="nombre" aria-describedby="emailHelp" placeholder="Codigo">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn" style="background-color: var(--rojo);width: 120px;border-radius: 0px 50px 50px 0px" >Buscar</button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
@@ -37,9 +49,9 @@
     <section class="destacados">
         <div class="container">
             <h2 class="text-center m-2">Destacados</h2>
-            <div class="row justify-content-center">
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
+            <div class="row">
                 @foreach($propiedades as $prop)
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 mt-3">
                     <a href="{{route('front.detailprop', $prop->slug)}}" style="text-decoration: none">
                         <div class="card">
                             <img src="{{asset($prop->imagen_p)}}" class="card-img-top" alt="casa en la montaña">
@@ -54,8 +66,8 @@
                             </div>
                         </div>
                     </a>
+                </div>
                 @endforeach
-            </div>
             </div>
         </div>
     </section>

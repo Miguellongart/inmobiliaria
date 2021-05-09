@@ -8,6 +8,7 @@
         </div>
         <ul class="nav-grid">
             <li class="nav-item-grid"><a href="/">Inicio</a></li>
+            <li class="nav-item-grid"><a href="{{route('front.propiedades')}}">Propiedades</a></li>
             <li class="nav-item-grid"><a href="{{route('front.proyectos')}}">Proyecto</a></li>
             <li class="nav-item-grid"><a href="{{route('front.vender')}}">Vender</a></li>
             <li class="nav-item-grid"><a href="{{route('front.servicios')}}">Servicio</a></li>

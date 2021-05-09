@@ -26,20 +26,30 @@ class SectorController extends Controller
         ]);
     }
 
+    public function addsector($id)
+    {
+        $title = 'Sectores';
+        return view('admin.sector.addsector', [
+            'row' => new Sector(),
+            'municipio' => Municipio::find($id),
+            'title' => $title,
+        ]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
             'sector' => 'required',
             'localidad' => 'required',
             'municipio_id' => 'required',
-        ]); 
+        ]);
 
         $row = new Sector($request->all());
         $row->save();
-        return redirect()->route('admin.sector.show', $row->id)->with('success', 'Guardado con Exito');
-        
+        return redirect()->route('admin.sector.index')->with('success', 'Guardado con Exito');
+
     }
-    
+
     public function show($id)
     {
         $title = 'Sector';

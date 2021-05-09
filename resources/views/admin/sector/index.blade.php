@@ -36,7 +36,7 @@
                             @can('admin.user.create')
                                 <a href="{{route('admin.sector.create')}}" class="btn btn-sm btn-success ml-auto">
                                     <i class="fas fa-plus"></i>
-                                </a>                                
+                                </a>
                             @endcan
                         </div>
                         <!-- /.card-header -->
@@ -49,7 +49,7 @@
                                         <th>Sector</th>
                                         <th>Localidad</th>
                                         @canany(['admin.sector.show', 'admin.sector.destroy'])
-                                        <th>Action</th>                       
+                                        <th>Action</th>
                                         @endcan
                                     </tr>
                                 </thead>
@@ -65,14 +65,19 @@
                                             <td>
                                                 <div class="btn-group">
                                                     @can('admin.sector.edit')
+                                                        <a href="{{route('admin.addsector', $row->id)}}" class="btn btn-warning btn-flat">
+                                                            <i class="fas fa-plus"></i>
+                                                        </a>
+                                                    @endcan
+                                                    @can('admin.sector.edit')
                                                     <a href="{{route('admin.sector.show', $row->id)}}" class="btn btn-info btn-flat">
                                                         <i class="far fa-eye"></i>
-                                                    </a>                            
+                                                    </a>
                                                     @endcan
                                                     @can('admin.sector.edit')
                                                     <a href="{{route('admin.sector.edit', $row->id)}}" class="btn btn-primary btn-flat">
                                                         <i class="fas fa-pencil-alt"></i>
-                                                    </a>                            
+                                                    </a>
                                                     @endcan
                                                     @can('admin.sector.destroy')
                                                     <form action="{{route('admin.sector.destroy', $row->id)}}" method="POST">
@@ -81,10 +86,10 @@
                                                         <button type="submit" title="delete" class="btn btn-danger btn-flat">
                                                             <i class="far fa-trash-alt"></i>
                                                         </button>
-                                                    </form>                      
+                                                    </form>
                                                     @endcan
                                                 </div>
-                                            </td>                    
+                                            </td>
                                             @endcan
                                         </tr>
                                         @endforeach

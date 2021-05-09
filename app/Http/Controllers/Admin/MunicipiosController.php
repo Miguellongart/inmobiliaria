@@ -27,17 +27,27 @@ class MunicipiosController extends Controller
         ]);
     }
 
+    public function addmunicipio($id)
+    {
+        $title = 'Municipio';
+        return view('admin.municipio.addmunicipio', [
+            'row' => new Estado(),
+            'estado' => Estado::find($id),
+            'title' => $title,
+        ]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
             'municipio' => 'required',
             'estado_id' => 'required',
-        ]); 
+        ]);
 
         $row = new Municipio($request->all());
         $row->save();
-        return redirect()->route('admin.municipio.show', $row->id)->with('success', 'Guardado con Exito');
-        
+        return redirect()->route('admin.municipio.index')->with('success', 'Guardado con Exito');
+
     }
 
     public function show($id)
@@ -65,7 +75,7 @@ class MunicipiosController extends Controller
         $request->validate([
             'municipio' => 'required',
             'estado_id' => 'required',
-        ]); 
+        ]);
 
         $row = Municipio::findOrFail($id);
         $row->update($request->all());

@@ -5,6 +5,7 @@
 @stop
 
 @section('css')
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 @stop
 
 @section('content_header')
@@ -36,7 +37,7 @@
                         </div>
                         <!-- /.card-header -->
                         <!-- form start -->
-                        <form action="{{route('admin.propiedad.store')}}" method="POST" enctype="multipart/form-data" class="dropzone" id="my-awesome-dropzone">
+                        <form action="{{route('admin.propiedad.store')}}" method="POST" enctype="multipart/form-data">
                             @include('admin.propiedad.form', ['btnText'=>'Guardar'])
                         </form>
                     </div>
@@ -54,36 +55,89 @@
         $("#t_vista").select2();
         $("#estatus").select2();
         $("#user_id").select2();
+        $("#pais_id").select2();
+        $("#estado_id").select2();
+        $("#municipio_id").select2();
+        $("#localidad_id").select2();
+        $("#destacado").select2();
         CKEDITOR.replace('descripcion');
 
-        Dropzone.options.myAwesomeDropzone = {
-            headers:{
-                'X-CSRF-TOKEN' : "{{csrf_token()}}"
-            },
-            maxFilesize: 3, // Tamaño máximo en MB
-            dictDefaultMessage: "Arrastre una imagen al recuadro para subirlo",
-            acceptedFiles: "image/*",
-            maxFiles: 4,
-        };
-
-        
-        $('#category_id').change(getSubcategories);
-        function getSubcategories() {
-            let category_id = $('#category_id').val();
-            let url = base_url + 'ecommerce/product/json/' + category_id;
-            $.getJSON(url, function(data) {
-                if(data.data){
-                    options = '<option value="">Selecciona</option>';
-                    $("#subcategory_id option").remove();
-                    $.each(data.data, function(key, val) {
-                        options = options + "<option value='"+val.subcategory_id+"'>"+ val.name +"</option>";
+        $('#pais_id').change(getPais);
+        function getPais() {
+            const pais_id = $('#pais_id').val();
+            const inputEstado = $('#estado_id')
+            const url = '/admin/Estado/json';
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: {_token: CSRF_TOKEN, "id": pais_id},
+                dataType: 'JSON',
+                success: function (response) {// What to do if we succeed
+                    inputEstado.append('<option value="">Elije un equipo</option>')
+                    $.each(response, function (key, value) {
+                        inputEstado.append("<option value='" + value.id + "'>" + value.estado + "</option>");
                     });
+                },
+                error: function(response){
+                    alert('Error'+response);
                 }
-                else{
-                    options = options + "<option value='0'>Sin resultados</option>";
-                }       
-                $("#subcategory_id").append(options);
             });
+        }
+
+        $('#estado_id').change(getMunicipio);
+        function getMunicipio() {
+            const estado_id = $('#estado_id').val();
+            const inputMunicipio = $('#municipio_id')
+            const url = '/admin/Municipio/json';
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: {_token: CSRF_TOKEN, "id": estado_id},
+                dataType: 'JSON',
+                success: function (response) {// What to do if we succeed
+                    inputMunicipio.append('<option value="">Elije un equipo</option>')
+                    $.each(response, function (key, value) {
+                        inputMunicipio.append("<option value='" + value.id + "'>" + value.municipio + "</option>");
+                    });
+                },
+                error: function(response){
+                    alert('Error'+response);
+                }
+            });
+        }
+
+        $('#municipio_id').change(getSector);
+        function getSector() {
+            const municipio_id = $('#municipio_id').val();
+            const inputLocalidad = $('#localidad_id')
+            const url = '/admin/Localidad/json';
+            var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: {_token: CSRF_TOKEN, "id": municipio_id},
+                dataType: 'JSON',
+                success: function (response) {// What to do if we succeed
+                    inputLocalidad.append('<option value="">Elije un equipo</option>')
+                    $.each(response, function (key, value) {
+                        inputLocalidad.append("<option value='" + value.id + "'>" + value.sector + " - " + value.localidad +"</option>");
+                    });
+                },
+                error: function(response){
+                    alert('Error'+response);
+                }
+            });
+        }
+
+        $('#titulo').keyup(convertToSlug);
+        function convertToSlug()
+        {
+            const texto = $('#titulo').val();
+            var trims = $.trim(texto);
+            var slug = trims.replace(/[^a-z0-9]/gi,'-').replace(/-+/g,'-').replace(/^-|-$/g);
+            $('#slug').val(slug.toLowerCase());
         }
     </script>
 @stop

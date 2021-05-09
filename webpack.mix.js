@@ -24,6 +24,7 @@ mix
     .postCss('resources/css/servicios.css', 'public/css')
     .postCss('resources/css/detallePropiedad.css', 'public/css')
     .postCss('resources/css/footer.css', 'public/css')
+    .postCss('resources/css/propiedades.css', 'public/css')
 
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),

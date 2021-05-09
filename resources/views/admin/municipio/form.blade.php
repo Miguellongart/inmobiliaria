@@ -2,15 +2,15 @@
 <div class="card-body">
     <div class="row">
         <div class="form-group col-6 col-md-6 col-sm-12">
-            <label>Seleccionar Pais</label>
-            <select name="pais_id" class="custom-select" id="pais_id">
+            <label>Seleccionar Estado</label>
+            <select name="estado_id" class="custom-select" id="pais_id">
               <option>Seleccione una Opcion</option>
               @foreach ($estados as $estado)
-                <option 
+                <option
                     @if($row->estado_id == $estado->id) selected @endif
                     value="{{$estado->id}}">
                     {{$estado->estado}}
-                </option>                  
+                </option>
               @endforeach
             </select>
           </div>
