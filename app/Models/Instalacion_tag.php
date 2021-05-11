@@ -18,4 +18,8 @@ class Instalacion_tag extends Model
     {
         return $this->belongsToMany(Propiedad::class, 'instalacions_propiedads','propiedad_id', 'instalacion_id');
     }
+    public function proyecto()
+    {
+        return $this->belongsToMany(Proyecto::class, 'instalacion_tag_proyecto','proyecto_id', 'instalacion_id');
+    }
 }

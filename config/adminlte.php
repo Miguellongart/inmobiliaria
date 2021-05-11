@@ -335,6 +335,19 @@ return [
             ],
         ],
         [
+            'text'    => 'Proyectos',
+            'icon'    => 'fas fa-laptop-house',
+            'submenu' => [
+                [
+                    'text'        => 'Listado Proyectos',
+                    'route'       => 'admin.proyecto.index',
+                    'icon'        => 'fas fa-hotel',
+                    /*'can'         => 'admin.t_propiedad.index',*/
+                ],
+
+            ],
+        ],
+        [
             'text'        => 'Empresa',
             'route'       => 'admin.empresa.index',
             'icon'        => 'fas fa-tachometer-alt fa-fw',
@@ -348,6 +361,19 @@ return [
             'text'        => 'Sobre Nosotros',
             'route'       => 'admin.nosotro.index',
             'icon'        => 'fas fa-tachometer-alt fa-fw',
+        ],
+        [
+            'text'    => 'Config',
+            'icon'    => 'fas fa-laptop-house',
+            'submenu' => [
+                [
+                    'text'        => 'Redes Sociales',
+                    'route'       => 'admin.redsocial.index',
+                    'icon'        => 'fas fa-hotel',
+                    /*'can'         => 'admin.t_propiedad.index',*/
+                ],
+
+            ],
         ],
         /*['header' => 'labels'],*/
     ],

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\ApiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\UserController;
@@ -16,9 +17,10 @@ use App\Http\Controllers\Admin\AdicionalController;
 use App\Http\Controllers\Admin\InstalacionController;
 use App\Http\Controllers\Admin\EmpresaController;
 use App\Http\Controllers\Admin\PropiedadController;
+use App\Http\Controllers\Admin\ProyectoController;
 use App\Http\Controllers\Admin\NosotroController;
 use App\Http\Controllers\Admin\ServicioController;
-use App\Http\Controllers\api\ApiController;
+use App\Http\Controllers\Admin\RedSocialController;
 
 Route::get('/admin', [HomeController::class, 'index'])->middleware('can:admin.home')->name('admin.home');
 
@@ -46,10 +48,15 @@ Route::resource('SobreNosotros', NosotroController::class)->names('admin.nosotro
 /*Sobre la empresa datos genericos */
 Route::resource('Empresa', EmpresaController::class)->names('admin.empresa');
 Route::resource('Servicios', ServicioController::class)->names('admin.servicio');
+Route::resource('RedesSociales', RedSocialController::class)->names('admin.redsocial');
 /*propieda*/
 Route::resource('Propiedad', PropiedadController::class)->names('admin.propiedad');
 Route::get('/Galeria/{id}/propiedad', [PropiedadController::class, 'galeriaForm'])->name('admin.propiedad.addGal');
 Route::post('/PropiedadGaleria/store', [PropiedadController::class, 'dropzoneStore'])->name('admin.propiedad.dropzonestore');
+/*proyectos*/
+Route::resource('Proyectos', ProyectoController::class)->names('admin.proyecto');
+Route::get('/Galeria/{id}/proyecto', [ProyectoController::class, 'galeriaForm'])->name('admin.proyecto.addGal');
+Route::post('/ProyectoGaleria/store', [ProyectoController::class, 'dropzoneStore'])->name('admin.proyecto.dropzonestore');
 
 Route::post('/Estado/json/', [ApiController::class, 'getEstado'])->name('getEstado');
 Route::post('/Municipio/json/', [ApiController::class, 'getMunicipio'])->name('getMunicipio');

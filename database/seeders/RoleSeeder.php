@@ -210,5 +210,19 @@ class RoleSeeder extends Seeder
         Permission::updateOrCreate(
             ['name' => 'admin.servicio.destroy'],
             ['description' => 'Eliminar Servicio'])->syncRoles([$role1]);
+
+        /*Proyecto*/
+        Permission::updateOrCreate(
+            ['name' => 'admin.proyecto.index'],
+            ['description' => 'Listado de Proyectos'])->syncRoles([$role1, $role2]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.proyecto.create'],
+            ['description' => 'Agregar nueva Proyecto'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.proyecto.edit'],
+            ['description' => 'Editar Proyecto'])->syncRoles([$role1]);
+        Permission::updateOrCreate(
+            ['name' => 'admin.proyecto.destroy'],
+            ['description' => 'Eliminar Proyecto'])->syncRoles([$role1]);
     }
 }

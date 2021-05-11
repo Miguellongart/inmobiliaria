@@ -79,118 +79,24 @@
     <section class="new-inmobiliaria">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
+                @foreach($proyectos as $prop)
+                <div class="col-12 col-sm-12 col-md-3 col-lg-3 mt-3">
+                    <a href="{{route('front.detailprop', $prop->slug)}}" style="text-decoration: none">
+                        <div class="card">
+                            <img src="{{asset($prop->imagen_p)}}" class="card-img-top" alt="casa en la montaña">
+                            <div class="card-body">
+                                <p class="card-text mb-2">Edificio</p>
+                                <p>Habitaciones  <b>{{$prop->n_habitacion}}-<i class="fas fa-bed"></i></b></p>
+                                <p>baño <b>{{$prop->n_bano}}-<i class="fas fa-bath"></i></b></p>
+                                <p>Estacionamientos <b>{{$prop->n_estacionamiento}}  <i class="fas fa-car"></i></b></p>
+                                <p>Antiguedad <b>{{$prop->antiguedad}}</b></p>
+                                <p>Vista <b>{{$prop->t_vista}}</b></p>
+                                <p class="prop mt-3">PROP. N° {{$prop->codigo}}</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 <button class="btn btn-sm mt-5">Ver mas</button>
             </div>
         </div>

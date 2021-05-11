@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Propiedad;
+use App\Models\Proyecto;
 use Illuminate\Http\Request;
 
 class FrontController extends Controller
@@ -10,10 +11,10 @@ class FrontController extends Controller
     public function index(){
         //dd('hola');
         $propiedades = Propiedad::where('estatus','=', 'PUBLICADO')
-                                ->where('destacado','=', 'SI')
-                                ->take(4)
-                                ->get();
-        return view('front.index', compact('propiedades'));
+                    ->where('destacado','=', 'SI')->take(4)->get();
+        $proyectos = Proyecto::where('estatus','=', 'PUBLICADO')
+                    ->where('destacado','=', 'SI')->take(6)->get();
+        return view('front.index', compact('propiedades','proyectos'));
     }
 
     public function propiedades(){
@@ -27,7 +28,10 @@ class FrontController extends Controller
 
     public function proyectos(){
         //dd('hola');
-        return view('front.proyectos');
+        $proyectos = Proyecto::where('estatus','=', 'PUBLICADO')
+                                ->where('destacado','=', 'SI')
+                                ->get();
+        return view('front.proyectos', compact('proyectos'));
     }
 
     public function contacto(){
@@ -48,7 +52,7 @@ class FrontController extends Controller
 
         //You should validate these inputs your way
 
-        $query = Employe::query();
+        $query = Proyecto::query();
 
         if (!empty($gender)) {
             $query->where('gender', $gender);

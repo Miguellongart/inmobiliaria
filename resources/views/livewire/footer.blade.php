@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <a href="{{route('front.index')}}" style="text-decoration: none">
-                        <img src="{{asset('front/img/logo.png')}}" class="logo-footer" alt="">
+                        <img src="{{asset('front/img/Logo.png')}}" class="logo-footer" alt="">
                     </a>
                     <p>
                         En 17 años de Exitosa Labor, nos hemos especializado en el Diseño, Estructuración,

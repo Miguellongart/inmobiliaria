@@ -19,4 +19,8 @@ class Adicional_tag extends Model
     {
         return $this->belongsToMany(Propiedad::class, 'adicionals_propiedads','propiedad_id', 'adicional_id');
     }
+    public function proyecto()
+    {
+        return $this->belongsToMany(Proyecto::class, 'adicional_tag_proyecto','proyecto_id', 'adicional_id');
+    }
 }
