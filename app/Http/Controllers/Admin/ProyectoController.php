@@ -155,15 +155,16 @@ class ProyectoController extends Controller
 
     public function edit($id)
     {
-        $title = 'Editar Propiedad';
+        $title = 'Editar Proyecto';
         return view('admin.proyecto.edit', [
-            'row' => Propiedad::find($id),
+            'row' => Proyecto::find($id),
             't_prop' => TipoPropiedad::all(),
             't_oper' => TipoOperacion::all(),
             'instalacion' => Instalacion_tag::all(),
             'adicional' => Adicional_tag::all(),
             'facilidad' => Facilidad_tag::all(),
             'usuarios' => User::all(),
+            'pais' => Pais::all(),
             'title' => $title,
         ]);
     }
