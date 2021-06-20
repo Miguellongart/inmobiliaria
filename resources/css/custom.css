@@ -37,6 +37,33 @@ body {
     align-items: end;
     top: 445px;
 }
+.buscador #select{
+    background-color: var(--amarillo);
+    width: 175px;
+    border: none;
+}
+.buscador #select_izq{
+    background-color: var(--amarillo);
+    width: 175px;
+    border: none;
+    border-radius: 50px 0px 0px 50px;
+}
+.buscador #select_der{
+    background-color: var(--amarillo);
+    width: 175px;
+    border-radius: 0px 50px 50px 0px;
+}
+.buscador #btn_buscar{
+    background-color: var(--rojo);
+    width: 175px;
+    border-radius: 0px 50px 50px 0px;
+    padding: 7px 0px;
+}
+.buscador input{
+    background-color: var(--amarillo);
+    width: 175px;
+    border: none;
+}
 .buscadorPropiedades{
     position: relative;
     display: flex;
@@ -53,10 +80,8 @@ body {
     background-color: var(--amarillo);
 }
 .destacados .card-img, .card-img-top{
-    height: 180px;
-    margin: 5px;
-    border-radius: 10px;
-    width: 246px;
+    margin: 0;
+    height: 215px;
 }
 .destacados .card, .card-body p{
     color:var(--negro);
@@ -102,10 +127,8 @@ body {
     background-color: var(--gris);
 }
 .new-inmobiliaria .card-img, .card-img-top{
-    height: 180px;
-    margin: 5px;
-    border-radius: 10px;
-    width: 246px;
+    margin: 0;
+    height: 215px;
 }
 .new-inmobiliaria .card, .card-body p{
     color:var(--negro);
@@ -151,10 +174,8 @@ body {
     background-color: var(--gris);
 }
 .new-proyect .card-img, .card-img-top{
-    height: 180px;
-    margin: 5px;
-    border-radius: 10px;
-    width: 235px;
+    margin: 0;
+    height: 215px;
 }
 .new-proyect .card, .card-body p{
     color:var(--negro);
@@ -179,33 +200,92 @@ body {
     }
     .new-proyect .card-img, .card-img-top {
         width: 100%;
-        height: auto;
+        height: 175px;
         margin: 0px;
     }
 }
 @media screen and (max-width: 768px) {
     .banner-home{
-        width: 100%;
-        height: 100vh;
-        position: relative;
-        background-repeat: no-repeat;
+        height: 75vh;
     }
     .banner-home-medio h2.title-banner{
         font-size: 30px;
     }
+    .banner-home-medio {
+         height: 75vh;
+     }
     .banner-vender h2.title-banner{
         font-size: 30px;
     }
+    .destacados .card{
+        width: 180px;
+    }
+    .new-inmobiliaria .card{
+        width: 180px;
+    }
+    .new-proyect .card{
+        width: 180px;
+    }
     .como-vender .contenido{
         padding: 0px 0px;
+    }
+    footer i{
+        font-size: 16px;
+    }
+    .buscador {
+        top: 230px;
+    }
+    .buscador #select{
+        width: 115px;
+    }
+    .buscador #select_izq {
+        width: 115px;
+    }
+    .buscador #select_der {
+        width: 115px;
+    }
+    .buscador input {
+        width: 115px;
+    }
+    .buscador #btn_buscar{
+        width: 115px;
     }
 }
 @media screen and (max-width: 411px) {
     .banner-home-medio img{
         height: 400px;
     }
+    .destacados {
+        padding: 0px 32px;
+        margin: 20px 0px;
+    }
+    .destacados .card {
+         width: 100%;
+    }
+    .new-inmobiliaria {
+         padding: 0px 32px;
+         margin: 20px 0px;
+    }
+    .new-inmobiliaria .card {
+        width: 100%;
+    }
     .banner-vender img{
         height: 300px;
+    }
+    .buscador {
+        top: 230px;
+    }
+    .buscador #select{
+        width: 80px;
+    }
+    .buscador #select_izq {
+        width: 120px
+    }
+    .buscador #select_der {
+        width: 120px;
+    }
+    .buscador input {
+        width: 80px;
     }
 }
 @media screen and (max-width: 375px) {

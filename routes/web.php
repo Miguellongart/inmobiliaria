@@ -15,11 +15,14 @@ use App\Http\Controllers\FrontController;
 */
 Route::get('/', [FrontController::class, 'index'])->name('front.index');
 Route::get('/Propiedades', [FrontController::class, 'propiedades'])->name('front.propiedades');
+Route::post('/Propiedades', [FrontController::class, 'propiedades'])->name('front.buscador');
 Route::get('/Proyectos', [FrontController::class, 'proyectos'])->name('front.proyectos');
 Route::get('/Vender', [FrontController::class, 'vender'])->name('front.vender');
 Route::get('/Servicios', [FrontController::class, 'servicios'])->name('front.servicios');
 Route::get('/Contacto', [FrontController::class, 'contacto'])->name('front.contacto');
 Route::get('/Propiedad/{slug}', [FrontController::class, 'detallePropiedad'])->name('front.detailprop');
+Route::get('/Proyecto/{slug}', [FrontController::class, 'detalleProyecto'])->name('front.detailproy');
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

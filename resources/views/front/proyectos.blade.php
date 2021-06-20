@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="contenido">
                     @foreach ($proyectos as $item)
-                        <a href="" style="text-decoration: none">
+                        <a href="{{route('front.detailproy', $item->slug)}}" style="text-decoration: none">
                             <div class="card mb-3" style="width: 100%;">
                                 <div class="row no-gutters">
                                     <div class="col-md-6" style="height: 250px;">

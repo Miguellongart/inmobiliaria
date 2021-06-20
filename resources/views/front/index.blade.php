@@ -8,37 +8,110 @@
                 <i class="fab fa-instagram"></i>
                 <i class="fas fa-phone-alt"></i>
             </div>
-            <form action="" class="buscador">
+            <form action="{{route('front.buscador')}}" method="post" class="buscador">
+                @csrf
                 <div class="container">
-                    <div class="row  justify-content-center">
-                        <div class="form-group">
-                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none; border-radius: 50px 0px 0px 50px" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                    <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block">
+                        <div class="row  justify-content-center">
+                            <div class="form-group">
+                                <select name="toperacion" id="select_izq">
+                                    <option value="">Tipo operacion</option>
+                                    @foreach($toperacion as $item)
+                                        <option value="{{$item->id}}">{{$item->tipo_operacion}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="tpropiedad" id="select">
+                                    <option value="">Tipo propiedad</option>
+                                    @foreach($tpropiedad as $item)
+                                        <option value="{{$item->id}}">{{$item->tipo_propiedad}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="pais" id="select">
+                                    <option value="">Pais</option>
+                                    @foreach($pais as $item)
+                                        <option value="{{$item->id}}">{{$item->nombre}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="estado" id="select">
+                                    <option value="">Estado</option>
+                                    @foreach($estado as $item)
+                                        <option value="{{$item->id}}">{{$item->estado}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="municipio" id="select">
+                                    <option value="">Municipio</option>
+                                    @foreach($municipio as $item)
+                                        <option value="{{$item->id}}">{{$item->municipio}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="sector" id="select_der">
+                                    <option value="">Sector</option>
+                                    @foreach($sector as $item)
+                                        <option value="{{$item->id}}">{{$item->sector}}-{{$item->localidad}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none;" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px;border-radius: 0px 50px 50px 0px" id="nombre" aria-describedby="emailHelp" placeholder="Nombre y Apellido">
+                        <div class="row justify-content-center" style="margin-top: -18px;">
+                            <div class="form-group">
+                                <select name="estado_propiedad" id="select_izq">
+                                    <option value="">Estado Obra</option>
+                                    <option value="Obra Gris">Obra Gris</option>
+                                    <option value="Obra blanca">Obra blanca</option>
+                                    <option value="Lista para habitar">Lista para habitar</option>
+                                    <option value="A reformar">A reformar</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input name="total_terreno" type="text" placeholder="Totalidad del terreno">
+                            </div>
+                            <div class="form-group">
+                                <input name="area_construccion" type="text"  placeholder="Área de construcción">
+                            </div>
+                            <div class="form-group">
+                                <input name="habitaciones" type="text" placeholder="N° Habitaciones">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn" id="btn_buscar">Buscar</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="row justify-content-center" style="margin-top: -16px;">
-                        <div class="form-group">
-                            <input type="text" class="form-control" style="background-color: var(--amarillo);width: 120px; border: none; border-radius: 50px 0px 0px 50px" id="nombre" aria-describedby="emailHelp" placeholder="Codigo">
+                    <div class="d-block d-sm-block d-md-none d-lg-none d-xl-none">
+                        <div class="row  justify-content-center">
+                            <div class="form-group">
+                                <select name="toperacion" id="select_izq">
+                                    <option value="">Tipo operacion</option>
+                                    @foreach($toperacion as $item)
+                                        <option value="{{$item->id}}">{{$item->tipo_operacion}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="tpropiedad"  id="select_der" >
+                                    <option value="">Tipo propiedad</option>
+                                    @foreach($tpropiedad as $item)
+                                        <option value="{{$item->id}}">{{$item->tipo_propiedad}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <button class="btn" style="background-color: var(--rojo);width: 120px;border-radius: 0px 50px 50px 0px" >Buscar</button>
+                        <div class="row justify-content-center" style="margin-top: -18px;">
+                            <div class="form-group">
+                                <input name="codigo" id="select_izq" type="text" placeholder="Codigo">
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn" id="btn_buscar">Buscar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -48,13 +121,15 @@
 
     <section class="destacados">
         <div class="container">
-            <h2 class="text-center m-2">Destacados</h2>
+            <h2 class="text-center m-2" style="color: var(--negro); text-transform: uppercase;text-align: center; font-size: 38px;margin-bottom: 10px;font-weight: 700">Destacados</h2>
             <div class="row">
                 @foreach($propiedades as $prop)
-                <div class="col-12 col-sm-12 col-md-3 col-lg-3 mt-3">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-3 mt-3">
                     <a href="{{route('front.detailprop', $prop->slug)}}" style="text-decoration: none">
                         <div class="card">
-                            <img src="{{asset($prop->imagen_p)}}" class="card-img-top" alt="casa en la montaña">
+                            <div class="image" style="margin: 4px;">
+                                <img src="{{asset($prop->imagen_p)}}" class="card-img-top" alt="casa en la montaña">
+                            </div>
                             <div class="card-body">
                                 <p class="card-text mb-2">Edificio</p>
                                 <p>Habitaciones  <b>{{$prop->n_habitacion}}-<i class="fas fa-bed"></i></b></p>
@@ -78,12 +153,15 @@
 
     <section class="new-inmobiliaria">
         <div class="container">
-            <div class="row justify-content-center">
+            <h2 class="text-center m-2" style="color: var(--negro); text-transform: uppercase;text-align: center; font-size: 38px;margin-bottom: 10px;font-weight: 700">Nuevos Proyectos</h2>
+            <div class="row">
                 @foreach($proyectos as $prop)
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 mt-3">
-                    <a href="{{route('front.detailprop', $prop->slug)}}" style="text-decoration: none">
+                    <a href="{{route('front.detailproy', $prop->slug)}}" style="text-decoration: none">
                         <div class="card">
-                            <img src="{{asset($prop->imagen_p)}}" class="card-img-top" alt="casa en la montaña">
+                            <div class="image" style="margin: 4px;">
+                                <img src="{{asset($prop->imagen_p)}}" class="card-img-top" alt="casa en la montaña">
+                            </div>
                             <div class="card-body">
                                 <p class="card-text mb-2">Edificio</p>
                                 <p>Habitaciones  <b>{{$prop->n_habitacion}}-<i class="fas fa-bed"></i></b></p>
@@ -97,8 +175,8 @@
                     </a>
                 </div>
                 @endforeach
-                <button class="btn btn-sm mt-5">Ver mas</button>
             </div>
+            <a href="{{route('front.proyectos')}}" class="btn btn-sm mt-5 align-content-center" style="background: var(--amarillo);color: var(--negro);">Ver mas</a>
         </div>
     </section>
 
@@ -140,7 +218,7 @@
     <section class="new-proyect">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
                     <div class="card">
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
@@ -154,7 +232,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
                     <div class="card">
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">
@@ -168,21 +246,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
-                    <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3 col-lg-3 mt-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
                     <div class="card">
                         <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
                         <div class="card-body">

@@ -57,14 +57,26 @@
         position: relative;
         background-repeat: no-repeat;
     }
-    .proyectos .contenido{
-        margin: 0px 0px
-    }
     .banner-proyecto h2.title-banner{
         font-size: 30px;
+    }
+    .proyectos .contenido{
+        margin: 0px 0px
     }
     .proyectos .card img{
         border-radius: 10px 10px 10px 10px;
         border-right: none;
     }
 }
+@media screen and (max-width: 411px) {
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-width: 360px) {
+}
+@media screen and (max-width: 320px) {
+}
+@media screen and (max-width: 280px) {
+}
+
+

@@ -12,7 +12,7 @@
         </div>
         <div class="form-group col-12 col-sm-12 col-md-4">
             <label for="slug">Slug<span style="color: red">*</span></label>
-            <input type="text" class="form-control" name="slug" value="" id="slug" readonly>
+            <input type="text" class="form-control" name="slug" value="{{old('slug',$row->slug)}}" id="slug" readonly>
         </div>
 
         <!--row2-->
@@ -21,7 +21,9 @@
             <select name="pais_id" class="custom-select" id="pais_id">
                 <option>Seleccione una Opcion</option>
                 @foreach ($pais as $p)
-                    <option value="{{$p->id}}">
+                    <option
+                        @if($row->pais_id == $p->id) selected @endif
+                        value="{{$p->id}}">
                         {{$p->nombre}}
                     </option>
                 @endforeach
@@ -137,10 +139,10 @@
         <div class="form-group col-12 col-sm-12 col-md-4">
             <label>Estado Propiedad</label>
             <select name="estado_propiedad" class="custom-select" id="estado_propiedad">
-                <option value="Obra Gris">Obra Gris</option>
-                <option value="Obra blanca">Obra blanca</option>
-                <option value="Lista para habitar">Lista para habitar</option>
-                <option value="A reformar">A reformar</option>
+                <option @if($row->estado_propiedad == "Obra Gris") selected  @endif value="Obra Gris">Obra Gris</option>
+                <option @if($row->estado_propiedad == "Obra blanca") selected  @endif value="Obra blanca">Obra blanca</option>
+                <option @if($row->estado_propiedad == "Lista para habitar") selected  @endif value="Lista para habitar">Lista para habitar</option>
+                <option @if($row->estado_propiedad == "A reformar") selected  @endif value="A reformar">A reformar</option>
             </select>
         </div>
         <!--selects-->
@@ -166,12 +168,12 @@
         </div>
         <div class="form-group col-12 col-sm-12 col-md-12">
             <label for="nota">Descripcion<span style="color: red">*</span></label>
-            <textarea name="descripcion" id="editor1"></textarea>
+            <textarea name="descripcion" id="editor1">{{$row->descripcion}}</textarea>
         </div>
         <div class="form-group col-12 col-sm-12 col-md-4">
             <label for="nota">Imagen Principal<span style="color: red">*</span></label>
             <div class="custom-file">
-                <input type="file" name="imagen_p" class="custom-file-input" id="customFile">
+                <input type="file" name="imagen_p" value="{{$row->imagen_p}}" class="custom-file-input" id="customFile">
                 <label class="custom-file-label" for="customFile"></label>
             </div>
         </div>
@@ -188,7 +190,8 @@
             <div class="row">
                 @foreach($ins as $data)
                     <div class="form-check col-2 col-sm-2 col-md-2">
-                        <input class="form-check-input" type="checkbox" value="{{$data->id}}" name="instalacion[]">
+                        <input class="form-check-input" type="checkbox" value="{{$data->id}}" name="instalacion[]
+                        @if($data->id) checked @endif">
                         <label class="form-check-label">{{$data->instalacion}}</label>
                     </div>
                 @endforeach
