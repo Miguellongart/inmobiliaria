@@ -1,6 +1,6 @@
 <div class="nav-wrapper">
     <nav class="navbar-grid">
-        <img src="{{asset('front/img/LogoNav.png')}}" alt="Company Logo">
+        <img src="{{asset('front/img/Logo.png')}}" alt="Company Logo">
         <div class="menu-toggle-grid" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
