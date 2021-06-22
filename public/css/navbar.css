@@ -4,16 +4,6 @@
     top: 0;
     background-color: #000;
 }
- /*  
-.grad-bar {
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 400% 400%;
-        -webkit-animation: gradbar 15s ease infinite;
-        -moz-animation: gradbar 15s ease infinite;
-        animation: gradbar 15s ease infinite;
-}*/
   /* NAVIGATION */
 .navbar-grid {    
     display: grid;
@@ -23,7 +13,7 @@
     overflow: hidden;
 }
 .navbar-grid img {
-    height: 45px;
+    height: 60px;
     width: auto;
     justify-self: start;
     margin-left: 50px;

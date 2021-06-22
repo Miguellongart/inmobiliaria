@@ -50,11 +50,13 @@ body {
 .buscador #select{
     background-color: var(--amarillo);
     width: 175px;
+    height: 36px;
     border: none;
 }
 .buscador #select_izq_neg{
     background-color: var(--negro);
     width: 175px;
+    height: 36px;
     border: none;
     border-radius: 50px 0px 0px 50px;
     color: var(--blanco);
@@ -62,6 +64,7 @@ body {
 .buscador #select_izq{
     background-color: var(--amarillo);
     width: 175px;
+    height: 36px;
     border: none;
     border-radius: 50px 0px 0px 50px;
     color: var(--negro);
@@ -69,18 +72,22 @@ body {
 .buscador #select_der{
     background-color: var(--amarillo);
     width: 175px;
+    height: 36px;
+    border: none;
     border-radius: 0px 50px 50px 0px;
     color: var(--negro);
 }
 .buscador #btn_buscar{
     background-color: var(--rojo);
     width: 175px;
+    height: 36px;
     border-radius: 0px 50px 50px 0px;
     padding: 7px 0px;
 }
 .buscador #input_form{
     background-color: var(--amarillo);
     width: 120px;
+    height: 36px;
     border: none;
     color: var(--negro);
 }

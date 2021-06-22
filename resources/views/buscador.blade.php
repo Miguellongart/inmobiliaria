@@ -52,7 +52,7 @@
                     </select>
                 </div>
             </div>
-            <div class="row justify-content-center" style="margin-top: -18px;">
+            <div class="row justify-content-center" style="margin-top: -16px;">
                 <div class="form-group">
                     <input name="codigo" type="text" id="select_izq_neg" placeholder="Codigo">
                 </div>

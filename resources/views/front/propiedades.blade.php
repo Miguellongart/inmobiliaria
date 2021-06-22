@@ -17,7 +17,7 @@
 
     <section class="propiedades">
         <div class="container">
-            <h3 class="titulos my-3"><b>Propiedades</b></h3>
+            <h3 class="titulos my-3">Propiedades</h3>
             <div class="row justify-content-center">
                 <form action="" class="buscadorPropiedades my-5">
                     <div class="container">
@@ -89,16 +89,16 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input name="total_terreno" type="text" placeholder="Totalidad del terreno">
+                                            <input name="total_terreno" type="text" placeholder="# terreno">
                                         </div>
                                         <div class="form-group">
-                                            <input name="area_construccion" type="text" placeholder="Área de construcción">
+                                            <input name="area_construccion" type="text" placeholder="# const">
                                         </div>
                                         <div class="form-group">
-                                            <input name="habitaciones" type="text" placeholder="N° Habitaciones">
+                                            <input name="habitaciones" type="text" placeholder="N° Hab">
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn" style="background-color: var(--rojo);width: 175px;border-radius: 0px 50px 50px 0px;padding: 7px 0px">Buscar</button>
+                                            <button type="submit" class="btn" id="btn_buscar">Buscar</button>
                                         </div>
                                     </div>
                                 </div>

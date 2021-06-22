@@ -7,11 +7,13 @@
 .buscadorPropiedades #select{
     background-color: var(--amarillo);
     width: 150px;
+    height: 36px;
     border: none;
 }
 .buscadorPropiedades #select_izq_neg{
     background-color: var(--negro);
     width: 150px;
+    height: 36px;
     border: none;
     border-radius: 50px 0px 0px 50px;
     color: var(--blanco);
@@ -19,23 +21,28 @@
 .buscadorPropiedades #select_izq{
     background-color: var(--amarillo);
     width: 150px;
+    height: 36px;
     border: none;
     border-radius: 50px 0px 0px 50px;
 }
 .buscadorPropiedades #select_der{
     background-color: var(--amarillo);
     width: 150px;
+    height: 36px;
+    border: none;
     border-radius: 0px 50px 50px 0px;
 }
 .buscadorPropiedades #btn_buscar{
     background-color: var(--rojo);
     width: 175px;
+    height: 36px;
     border-radius: 0px 50px 50px 0px;
     padding: 7px 0px;
 }
 .buscadorPropiedades input{
     background-color: var(--amarillo);
     width: 120px;
+    height: 36px;
     border: none;
 }
 /*destacados home*/
