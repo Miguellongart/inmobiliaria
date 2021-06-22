@@ -53,8 +53,8 @@
                 </div>
             </div>
             <div class="row justify-content-center" style="margin-top: -18px;">
-                <div class="form-group" id="select_izq_neg">
-                    <input name="total_terreno" type="text" placeholder="Totalidad del terreno">
+                <div class="form-group">
+                    <input name="codigo" type="text" id="select_izq_neg" placeholder="Codigo">
                 </div>
                 <div class="form-group">
                     <select name="estado_propiedad" id="select">
@@ -66,13 +66,13 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <input name="total_terreno" type="text" placeholder="Totalidad del terreno">
+                    <input id="input_form" name="total_terreno" type="text" placeholder="Terreno">
                 </div>
                 <div class="form-group">
-                    <input name="area_construccion" type="text"  placeholder="Área de construcción">
+                    <input id="input_form" name="area_construccion"  type="text"  placeholder="Area Const.">
                 </div>
                 <div class="form-group">
-                    <input name="habitaciones" type="text" placeholder="N° Habitaciones">
+                    <input id="input_form" name="habitaciones"  type="text" placeholder="N°Hab">
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn" id="btn_buscar">Buscar</button>
@@ -90,7 +90,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <select name="tpropiedad"  id="select_der" >
+                    <select name="tpropiedad"  id="select_der">
                         <option value="">propiedad</option>
                         @foreach($tpropiedad as $item)
                             <option value="{{$item->id}}">{{$item->tipo_propiedad}}</option>
@@ -100,7 +100,7 @@
             </div>
             <div class="row justify-content-center" style="margin-top: -18px;">
                 <div class="form-group">
-                    <input name="codigo" id="select_izq" type="text" placeholder="Codigo">
+                    <input id="input_form" name="codigo" id="select_izq" type="text" placeholder="Codigo">
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn" id="btn_buscar">Buscar</button>

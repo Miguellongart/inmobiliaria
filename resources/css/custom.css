@@ -2,13 +2,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --amarillo: rgb(255 255 0);
     --rojo: #f84a06;
     --negro: #000000;
     --blanco: #ffffff;
     --gris: #dddddd;
+    --amarillo: rgb(255 255 0);
 }
-
+main{
+    background: white;
+}
+.titulos{
+    color: var(--negro);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
 body {
     margin:0;
     padding: 0;
@@ -42,16 +52,25 @@ body {
     width: 175px;
     border: none;
 }
+.buscador #select_izq_neg{
+    background-color: var(--negro);
+    width: 175px;
+    border: none;
+    border-radius: 50px 0px 0px 50px;
+    color: var(--blanco);
+}
 .buscador #select_izq{
     background-color: var(--amarillo);
     width: 175px;
     border: none;
     border-radius: 50px 0px 0px 50px;
+    color: var(--negro);
 }
 .buscador #select_der{
     background-color: var(--amarillo);
     width: 175px;
     border-radius: 0px 50px 50px 0px;
+    color: var(--negro);
 }
 .buscador #btn_buscar{
     background-color: var(--rojo);
@@ -59,10 +78,11 @@ body {
     border-radius: 0px 50px 50px 0px;
     padding: 7px 0px;
 }
-.buscador input{
+.buscador #input_form{
     background-color: var(--amarillo);
-    width: 175px;
+    width: 120px;
     border: none;
+    color: var(--negro);
 }
 .buscadorPropiedades{
     position: relative;
@@ -73,7 +93,7 @@ body {
 /*destacados home*/
 .destacados{
     padding: 40px 0px;
-    margin: 15px 100px;
+    margin: 15px 130px;
 }
 .destacados .card{
     border-radius: 10px;
@@ -100,10 +120,11 @@ body {
 /*banner-home-medio*/
 .banner-home-medio{
     width: 100%;
-    height: 100vh;
+    height: 135vh;
     min-height: 500px;
     position: relative;
     background-repeat: no-repeat;
+    box-shadow: 0px 0px 41px 40px #ffffff;
 }
 .banner-home-medio h2.title-banner{
     position: absolute;
@@ -119,8 +140,9 @@ body {
 }
 /*inmobiliaria*/
 .new-inmobiliaria{
-    padding: 40px 0px;
-    margin: 15px 100px;
+    padding: 0 0px;
+    margin: -50px 130px;
+    z-index: 100;
 }
 .new-inmobiliaria .card{
     border-radius: 10px;
@@ -148,10 +170,13 @@ body {
     padding: 40px 0px;
     margin: 15px 0px;
     width: 100%;
-    height: 100vh;
+    height: 138vh;
     min-height: 500px;
     position: relative;
     background-repeat: no-repeat;
+}
+.contacto .contenido{
+    margin: 70px 130px;
 }
 .contacto h2{
     font-size: 35px;
@@ -167,7 +192,7 @@ body {
 /*Nuevo proyecto*/
 .new-proyect{
     padding: 40px 0px;
-    margin: 15px 100px;
+    margin: 15px 130px;
 }
 .new-proyect .card{
     border-radius: 10px;
@@ -262,12 +287,19 @@ body {
     .destacados .card {
          width: 100%;
     }
+    .new-proyect {
+        padding: 40px 0px;
+        margin: 14px 0;
+    }
     .new-inmobiliaria {
          padding: 0px 32px;
          margin: 20px 0px;
     }
     .new-inmobiliaria .card {
         width: 100%;
+    }
+    .contacto .contenido{
+        margin: 0 0;
     }
     .banner-vender img{
         height: 300px;

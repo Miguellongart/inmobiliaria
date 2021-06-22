@@ -7,11 +7,10 @@
                         <img src="{{asset('front/img/Logo.png')}}" class="logo-footer" alt="">
                     </a>
                     <p>
-                        En 17 años de Exitosa Labor, nos hemos especializado en el Diseño, Estructuración,
-                        Promoción y Venta de Proyectos Inmobiliarios del Sector Primario y Secundario.
-                        Estamos conformados por un grupo de Profesionales Universitarios,
-                        formados en distintas áreas de trabajo, que juntos, nos esforzamos día a día,
-                        por cumplir y lograr consolidar el direccionamiento estratégico de nuestra organización y de nuestras vidas.
+                        Flores y Asociados - J-31575636-6 Urbanizacion <br>
+                        Costa Azul, calle Uveros, VENETUR <br>
+                        (Antiguo Hotel Margarita Hilton) local No 15.<br>
+                        Porlamar, Nueva esparta. <br>
                     </p><br>
                     <span>Telefonos: +58.295.2672918 / +58.414.7934963 / +58.416.6954083</span>
                 </div>

@@ -6,8 +6,8 @@ footer{
     color: var(--blanco);
 }
 footer img.logo-footer{
-    width: 210px;
-    margin-bottom: 10px;
+    width: 175px;
+    margin: 0 auto 25px auto;
 }
 footer p, span{
     font-size: 12px;
@@ -29,3 +29,4 @@ footer button.btn-footer{
     border-radius: 15px;
     padding: 5px 10px;
 }
+

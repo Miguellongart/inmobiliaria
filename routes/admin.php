@@ -21,6 +21,8 @@ use App\Http\Controllers\Admin\ProyectoController;
 use App\Http\Controllers\Admin\NosotroController;
 use App\Http\Controllers\Admin\ServicioController;
 use App\Http\Controllers\Admin\RedSocialController;
+use App\Http\Controllers\Admin\BannerController;
+
 
 Route::get('/admin', [HomeController::class, 'index'])->middleware('can:admin.home')->name('admin.home');
 
@@ -49,6 +51,7 @@ Route::resource('SobreNosotros', NosotroController::class)->names('admin.nosotro
 Route::resource('Empresa', EmpresaController::class)->names('admin.empresa');
 Route::resource('Servicios', ServicioController::class)->names('admin.servicio');
 Route::resource('RedesSociales', RedSocialController::class)->names('admin.redsocial');
+Route::resource('Banners', BannerController::class)->names('admin.banner');
 /*propieda*/
 Route::resource('Propiedad', PropiedadController::class)->names('admin.propiedad');
 Route::get('/Galeria/{id}/propiedad', [PropiedadController::class, 'galeriaForm'])->name('admin.propiedad.addGal');

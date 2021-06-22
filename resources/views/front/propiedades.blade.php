@@ -17,9 +17,9 @@
 
     <section class="propiedades">
         <div class="container">
-            <h3 style="color: var(--negro); text-transform: uppercase;text-align: center; font-size: 38px;margin-bottom: 10px"><b>Propiedades</b></h3>
+            <h3 class="titulos my-3"><b>Propiedades</b></h3>
             <div class="row justify-content-center">
-                <form action="" class="buscadorPropiedades">
+                <form action="" class="buscadorPropiedades my-5">
                     <div class="container">
                         <div class="row  justify-content-center">
                             @csrf
@@ -28,7 +28,7 @@
                                     <div class="row  justify-content-center">
                                         <div class="form-group">
                                             <select name="toperacion" id="select_izq">
-                                                <option value="">Tipo operacion</option>
+                                                <option value="">Operacion</option>
                                                 @foreach($toperacion as $item)
                                                     <option value="{{$item->id}}">{{$item->tipo_operacion}}</option>
                                                 @endforeach
@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="form-group">
                                             <select name="tpropiedad" id="select">
-                                                <option value="">Tipo propiedad</option>
+                                                <option value="">Propiedad</option>
                                                 @foreach($tpropiedad as $item)
                                                     <option value="{{$item->id}}">{{$item->tipo_propiedad}}</option>
                                                 @endforeach
@@ -77,7 +77,10 @@
                                     </div>
                                     <div class="row justify-content-center" style="margin-top: -18px;">
                                         <div class="form-group">
-                                            <select name="estado_propiedad" id="select_izq">
+                                            <input name="codigo" type="text" id="select_izq_neg" placeholder="Codigo">
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="estado_propiedad" id="select">
                                                 <option value="">Estado Obra</option>
                                                 <option value="Obra Gris">Obra Gris</option>
                                                 <option value="Obra blanca">Obra blanca</option>
@@ -86,13 +89,13 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input name="total_terreno" type="text" style="background-color: var(--amarillo);width: 175px; border: none;" placeholder="Totalidad del terreno">
+                                            <input name="total_terreno" type="text" placeholder="Totalidad del terreno">
                                         </div>
                                         <div class="form-group">
-                                            <input name="area_construccion" type="text" style="background-color: var(--amarillo);width: 175px; border: none;" placeholder="Área de construcción">
+                                            <input name="area_construccion" type="text" placeholder="Área de construcción">
                                         </div>
                                         <div class="form-group">
-                                            <input name="habitaciones" type="text" style="background-color: var(--amarillo);width: 175px; border: none;" placeholder="N° Habitaciones">
+                                            <input name="habitaciones" type="text" placeholder="N° Habitaciones">
                                         </div>
                                         <div class="form-group">
                                             <button type="submit" class="btn" style="background-color: var(--rojo);width: 175px;border-radius: 0px 50px 50px 0px;padding: 7px 0px">Buscar</button>

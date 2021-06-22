@@ -7,11 +7,11 @@
         <h2 class="title-proyecto">"Oportunidaes para invertir o vivir"</h2>
         <div class="container">
             <div class="redes d-flex flex-column justify-content-end">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-whatsapp"></i>
-                <i class="fab fa-telegram-plane"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fas fa-phone-alt"></i>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-whatsapp"></i></a>
+                <a href=""><i class="fab fa-telegram-plane"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fas fa-phone-alt"></i></a>
             </div>
         </div>
     </section>

@@ -375,6 +375,20 @@ return [
 
             ],
         ],
+
+        [
+            'text'    => 'Banners',
+            'icon'    => 'far fa-images',
+            'submenu' => [
+                [
+                    'text'        => 'Banner Home',
+                    'route'       => 'admin.banner.index',
+                    'icon'        => 'fas fa-hotel',
+                    /*'can'         => 'admin.t_propiedad.index',*/
+                ],
+
+            ],
+        ],
         /*['header' => 'labels'],*/
     ],
 

@@ -2,11 +2,11 @@
     <section class="banner-home con" style="background-image: url({{asset('front/img/fondo.png')}})">
         <div class="container">
             <div class="redes d-flex flex-column justify-content-end">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-whatsapp"></i>
-                <i class="fab fa-telegram-plane"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fas fa-phone-alt"></i>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-whatsapp"></i></a>
+                <a href=""><i class="fab fa-telegram-plane"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fas fa-phone-alt"></i></a>
             </div>
             @include('buscador')
         </div>
@@ -14,13 +14,13 @@
 
     <section class="destacados">
         <div class="container">
-            <h2 class="text-center m-2" style="color: var(--negro); text-transform: uppercase;text-align: center; font-size: 38px;margin-bottom: 10px;font-weight: 700">Destacados</h2>
+            <h2 class="text-center m-2 titulos">Destacados</h2>
             <div class="row">
                 @foreach($propiedades as $prop)
                 <div class="col-12 col-sm-12 col-md-4 col-lg-3 mt-3">
                     <a href="{{route('front.detailprop', $prop->slug)}}" style="text-decoration: none">
                         <div class="card">
-                            <div class="image" style="margin: 4px;">
+                            <div class="image" style="margin: 7px;">
                                 <img src="{{asset($prop->imagen_p)}}" class="card-img-top" alt="casa en la montaña">
                             </div>
                             <div class="card-body">
@@ -46,13 +46,12 @@
 
     <section class="new-inmobiliaria">
         <div class="container">
-            <h2 class="text-center m-2" style="color: var(--negro); text-transform: uppercase;text-align: center; font-size: 38px;margin-bottom: 10px;font-weight: 700">Nuevos Proyectos</h2>
-            <div class="row">
+           <div class="row">
                 @foreach($proyectos as $prop)
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 mt-3">
                     <a href="{{route('front.detailproy', $prop->slug)}}" style="text-decoration: none">
                         <div class="card">
-                            <div class="image" style="margin: 4px;">
+                            <div class="image" style="margin: 7px;">
                                 <img src="{{asset($prop->imagen_p)}}" class="card-img-top" alt="casa en la montaña">
                             </div>
                             <div class="card-body">
@@ -75,7 +74,7 @@
 
     <section class="contacto" style="background-image: url({{asset('front/img/contactanos.jpg')}})">
         <div class="container">
-            <div class="row">
+            <div class="row contenido">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6"></div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6">
                     <h2>Contactanos</h2>
@@ -110,10 +109,13 @@
 
     <section class="new-proyect">
         <div class="container">
+            <h2 class="text-center m-2 titulos">Nuevos Proyectos</h2>
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
                     <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
+                        <div class="image" style="margin: 7px;">
+                            <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
+                        </div>
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
                             <p>2 Habitaciones <i class="fas fa-bed"></i></p>
@@ -127,7 +129,9 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
                     <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
+                        <div class="image" style="margin: 7px;">
+                            <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
+                        </div>
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
                             <p>2 Habitaciones <i class="fas fa-bed"></i></p>
@@ -141,7 +145,9 @@
                 </div>
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
                     <div class="card">
-                        <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
+                        <div class="image" style="margin: 7px;">
+                            <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
+                        </div>
                         <div class="card-body">
                             <p class="card-text mb-2">Edificio</p>
                             <p>2 Habitaciones <i class="fas fa-bed"></i></p>
