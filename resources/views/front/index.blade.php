@@ -1,6 +1,6 @@
 <x-app-layout>
-    <section class="banner-home con" style="background-image: url({{asset('front/img/fondo.png')}})">
-        <div class="container">
+    <section class="banner-home con" style="background-image: url({{asset('front/img/new/home1.png')}})">
+        <div class="container-fluid">
             <div class="redes d-flex flex-column justify-content-end">
                 <a href=""><i class="fab fa-facebook-f"></i></a>
                 <a href=""><i class="fab fa-whatsapp"></i></a>
@@ -40,13 +40,13 @@
         </div>
     </section>
 
-    <section class="banner-home-medio" style="background-image: url({{asset('front/img/Hacemos.jpg')}})">
+    <section class="banner-home-medio" style="background-image: url({{asset('front/img/new/home2.png')}})">
         <h2 class="title-banner">"Hacemos tus sueño Inmobiliario realidad"</h2>
     </section>
 
     <section class="new-inmobiliaria">
         <div class="container">
-           <div class="row">
+            <div class="row">
                 @foreach($proyectos as $prop)
                 <div class="col-12 col-sm-12 col-md-3 col-lg-3 mt-3">
                     <a href="{{route('front.detailproy', $prop->slug)}}" style="text-decoration: none">
@@ -72,7 +72,7 @@
         </div>
     </section>
 
-    <section class="contacto" style="background-image: url({{asset('front/img/contactanos.jpg')}})">
+    <section class="contacto" style="background-image: url({{asset('front/img/new/Home3.png')}})">
         <div class="container">
             <div class="row contenido">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-6"></div>
@@ -90,7 +90,7 @@
                             <input type="text" class="form-control" id="asunto" aria-describedby="emailHelp" placeholder="Asunto">
                         </div>
                         <div class="form-group">
-                            <select name="" id="" style="width: 100%">
+                            <select name="" class="form-control" id="" style="width: 100%">
                                 <option value="">Servicio</option>
                                 <option value="">Servicio 1</option>
                                 <option value="">Servicio 1</option>
@@ -98,7 +98,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <textarea name="mensaje" id="" rows="3" style="width: 100%"></textarea>
+                            <textarea name="mensaje" class="form-control" id="" rows="3" style="width: 100%"></textarea>
                         </div>
                         <button type="submit" class="btn btn-contacto" style="background-color: var(--amarillo);color: black; border: 1px solid black">Enviar</button>
                     </form>
@@ -111,54 +111,26 @@
         <div class="container">
             <h2 class="text-center m-2 titulos">Nuevos Proyectos</h2>
             <div class="row justify-content-center">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="card">
-                        <div class="image" style="margin: 7px;">
-                            <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
+                @foreach($proyectosnews as $propnew)
+                    <div class="col-12 col-sm-12 col-md-3 col-lg-3 mt-3">
+                        <a href="{{route('front.detailproy', $propnew->slug)}}" style="text-decoration: none">
+                            <div class="card">
+                                <div class="image" style="margin: 7px;">
+                                    <img src="{{asset($propnew->imagen_p)}}" class="card-img-top" alt="casa en la montaña">
+                                </div>
+                                <div class="card-body">
+                                    <p class="card-text mb-2">Edificio</p>
+                                    <p>Habitaciones  <b>{{$propnew->n_habitacion}}-<i class="fas fa-bed"></i></b></p>
+                                    <p>baño <b>{{$propnew->n_bano}}-<i class="fas fa-bath"></i></b></p>
+                                    <p>Estacionamientos <b>{{$propnew->n_estacionamiento}}  <i class="fas fa-car"></i></b></p>
+                                    <p>Antiguedad <b>{{$propnew->antiguedad}}</b></p>
+                                    <p>Vista <b>{{$propnew->t_vista}}</b></p>
+                                    <p class="prop mt-3">PROP. N° {{$propnew->codigo}}</p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="card">
-                        <div class="image" style="margin: 7px;">
-                            <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="card">
-                        <div class="image" style="margin: 7px;">
-                            <img src="{{asset('front/img/fondo.png')}}" class="card-img-top" alt="casa en la montaña">
-                        </div>
-                        <div class="card-body">
-                            <p class="card-text mb-2">Edificio</p>
-                            <p>2 Habitaciones <i class="fas fa-bed"></i></p>
-                            <p>1 baño <i class="fas fa-bath"></i></p>
-                            <p>2 Estacionamientos <i class="fas fa-car"></i></p>
-                            <p>Antiguedad</p>
-                            <p>Vista</p>
-                            <p class="prop mt-3">PROP. N° 297</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

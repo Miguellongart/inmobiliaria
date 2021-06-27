@@ -40,6 +40,10 @@ body {
     color: var(--blanco);
     margin: 5px 10px;
 }
+.redes i:hover{
+    color: var(--amarillo);
+    font-weight: 600;
+}
 .buscador{
     position: relative;
     display: flex;
@@ -53,6 +57,10 @@ body {
     height: 36px;
     border: none;
 }
+.buscador #select_izq_neg::-webkit-input-placeholder {
+    text-align: center;
+    line-height: 100px;/* Centrado vertical */
+}
 .buscador #select_izq_neg{
     background-color: var(--negro);
     width: 175px;
@@ -60,6 +68,8 @@ body {
     border: none;
     border-radius: 50px 0px 0px 50px;
     color: var(--blanco);
+    text-align: center;
+    text-align-last: center;
 }
 .buscador #select_izq{
     background-color: var(--amarillo);
@@ -68,6 +78,12 @@ body {
     border: none;
     border-radius: 50px 0px 0px 50px;
     color: var(--negro);
+    text-align: center;
+    text-align-last: center;
+}
+.buscador #select_izq::-webkit-keygen-select {
+    text-align: center;
+    line-height: 100px; /* Centrado vertical */
 }
 .buscador #select_der{
     background-color: var(--amarillo);
@@ -76,6 +92,8 @@ body {
     border: none;
     border-radius: 0px 50px 50px 0px;
     color: var(--negro);
+    text-align: center;
+    text-align-last: center;
 }
 .buscador #btn_buscar{
     background-color: var(--rojo);
@@ -187,12 +205,12 @@ body {
 }
 .contacto h2{
     font-size: 35px;
-    font-weight: 900;
+    font-weight: 800;
     margin: 5px 0px;
 }
 .contacto h4{
-    font-size: 20px;
-    font-weight: 900;
+    font-size: 18px;
+    font-weight: 600;
     margin: 5px 0px;
 }
 

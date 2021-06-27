@@ -21099,6 +21099,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/css/nosotros.css":
+/*!************************************!*\
+  !*** ./resources/css/nosotros.css ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./resources/css/app.css":
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
@@ -21465,6 +21478,7 @@ process.umask = function() { return 0; };
 /******/ 			["./resources/css/detallePropiedad.css"],
 /******/ 			["./resources/css/footer.css"],
 /******/ 			["./resources/css/propiedades.css"],
+/******/ 			["./resources/css/nosotros.css"],
 /******/ 			["./resources/css/app.css"]
 /******/ 		];
 /******/ 		// no chunk on demand loading

@@ -19,6 +19,7 @@ class FrontController extends Controller
         //dd('hola');
         $propiedades = Propiedad::where('estatus','=', 'PUBLICADO')->where('destacado','=', 'SI')->take(4)->get();
         $proyectos = Proyecto::where('estatus','=', 'PUBLICADO')->where('destacado','=', 'SI')->take(6)->get();
+        $proyectosnews = Proyecto::where('estatus','=', 'PUBLICADO')->latest()->take(4)->get();
 
         //filro datos
         $toperacion = TipoOperacion::all();
@@ -31,6 +32,7 @@ class FrontController extends Controller
             compact(
                 'propiedades',
                 'proyectos',
+                'proyectosnews',
                 'tpropiedad',
                 'toperacion',
                 'pais','estado','municipio','sector',

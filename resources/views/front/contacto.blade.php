@@ -3,8 +3,8 @@
         <link rel="stylesheet" href="{{ mix('css/contacto.css') }}">
         <link rel="stylesheet" href="{{ mix('css/proyectos.css') }}">
     @endsection
-    <section class="banner-proyecto" style="background-image: url({{asset('front/img/fondo.png')}})">
-        <h2 class="title-proyecto">"Oportunidaes para invertir o vivir"</h2>
+    <section class="banner-contacto" style="background-image: url({{asset('front/img/new/home1.png')}})">
+        <h2 class="title-banner">"Oportunidaes para invertir o vivir"</h2>
         <div class="container">
             <div class="redes d-flex flex-column justify-content-end">
                 <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -40,7 +40,7 @@
                         <input type="text" class="form-control" id="asunto" aria-describedby="emailHelp" placeholder="Asunto">
                     </div>
                     <div class="form-group">
-                        <select name="" id="" style="width: 100%">
+                        <select name="" class="form-control" id="" style="width: 100%">
                             <option value="">Tipo de Servicio</option>
                             <option value="">Servicio 1</option>
                             <option value="">Servicio 1</option>
@@ -48,7 +48,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <textarea name="mensaje" id="" rows="5" style="width: 100%"></textarea>
+                        <textarea name="mensaje" class="form-control" id="" rows="5" style="width: 100%"></textarea>
                     </div>
                     <button type="submit" class="btn btn-contacto">Enviar</button>
                 </form>

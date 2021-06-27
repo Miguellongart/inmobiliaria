@@ -5,7 +5,7 @@
     <section class="detallePropiedad">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-6">
+                <div class="col-12 col-sm-12 col-md-5">
                     <img class="imagen_p" src="{{asset($detalleProp->imagen_p)}}" alt="{{$detalleProp->titulo}}">
                     <div class="row">
                         <div class="wrapper">
@@ -19,27 +19,28 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-6">
+                <div class="col-12 col-sm-12 col-md-7">
                     <h1>{{$detalleProp->titulo}}</h1>
-                    <div class="flex justify-content-between">
+                    <div class="d-flex justify-content-between info">
                         <span class="red">PROP N# {{$detalleProp->codigo}}</span>
-                        <span class="red">Presio BsS {{$detalleProp->precio_BS}}</span>
-                        <label>{{$detalleProp->user['name']}}</label>
+                        <span class="red">Precio BsS {{$detalleProp->precio_BS}}</span>
+                        <span class="red">Precio Pt {{$detalleProp->precio_PTS}}</span>
+                        <p>Vendedor: <b>{{$detalleProp->user['name']}}</b></p>
                     </div>
                     <br>
-                    <div class="flex justify-content-between info">
+                    <div class="d-flex justify-content-between info">
                         <p>Habitaciones: <b>{{$detalleProp->n_habitacion}}</b></p>
                         <p>Antiguedad: <b>{{$detalleProp->antiguedad}}</b></p>
                         <p>Baños: <b>{{$detalleProp->n_bano}}</b></p>
                         <p>Tipo Vista: <b>{{$detalleProp->t_vista}}</b></p>
                     </div>
                     <br>
-                    <div class="flex justify-content-between info">
+                    <div class="d-flex justify-content-between info">
                         <p>Estado propiedad: <b>{{$detalleProp->estado_propiedad}}</b></p>
                         <p>Area de construccion: <b>{{$detalleProp->area_construccion}}-Mts2</b></p>
                     </div>
                     <br>
-                    <div class="flex justify-content-between info">
+                    <div class="d-flex justify-content-between info">
                         <p>Estacionamiento: <b>{{$detalleProp->n_estacionamiento}}</b></p>
                         <p>Total De Terreno <b>{{$detalleProp->total_terreno}}-Mts2</b></p>
                     </div>

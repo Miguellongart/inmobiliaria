@@ -25,12 +25,13 @@ mix
     .postCss('resources/css/detallePropiedad.css', 'public/css')
     .postCss('resources/css/footer.css', 'public/css')
     .postCss('resources/css/propiedades.css', 'public/css')
+    .postCss('resources/css/nosotros.css', 'public/css')
 
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
         require('autoprefixer'),
-    ]);
+    ])
 
 if (mix.inProduction()) {
     mix.version();

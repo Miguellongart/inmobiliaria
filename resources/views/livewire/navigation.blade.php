@@ -1,6 +1,8 @@
 <div class="nav-wrapper">
     <nav class="navbar-grid">
-        <img src="{{asset('front/img/Logo.png')}}" alt="Company Logo">
+        <a href="/">
+            <img src="{{asset('front/img/Logo.png')}}" alt="Company Logo">
+        </a>
         <div class="menu-toggle-grid" id="mobile-menu">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -27,7 +29,7 @@
                     </li>
                 </form>
             @else
-                <li class="nav-item-grid"><a href="{{route('login')}}">Login</a></li>
+                <li class="nav-item-grid"><a href="{{route('login')}}"><img src="{{asset('front/img/iconlogin.png')}}" style="height: 15px" alt=""></a></li>
             @endauth
         </ul>
     </nav>

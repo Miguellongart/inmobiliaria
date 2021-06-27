@@ -1,8 +1,9 @@
 .detallePropiedad{
     padding: 40px 0px;
-    margin: 15px 100px;
-    box-shadow: 2px 2px 2px 4px rgba(0,0,0,0.53);
-    border-radius: 15px
+    margin: 55px 130px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 60%);
 }
 
 .detallePropiedad .imagen_p{
@@ -42,7 +43,7 @@
 .detallePropiedad .wrapper .carousel{
     max-width: 600px;
     margin: auto;
-    padding: 0 30px;
+    padding: 0 27px;
 }
 .detallePropiedad .wrapper .carousel .card{
     border: none;
@@ -52,7 +53,7 @@
 .detallePropiedad .wrapper .carousel .card img{
     border-radius: 20px;
     width: 100%;
-    height: 125px;
+    height: 90px;
     box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 

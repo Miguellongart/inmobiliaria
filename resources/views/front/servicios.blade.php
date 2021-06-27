@@ -2,7 +2,7 @@
     @section('cssfront')
         <link rel="stylesheet" href="{{ mix('css/servicios.css') }}">
     @endsection
-    <section class="banner-servicios" style="background-image: url({{asset('front/img/banne-servicios.jpg')}})">
+    <section class="banner-servicios" style="background-image: url({{asset('front/img/new/Servicios.jpg')}})">
         <h2 class="title-banner">"Nuestros Servicios"</h2>
         <div class="container">
             <div class="redes d-flex flex-column justify-content-end">
